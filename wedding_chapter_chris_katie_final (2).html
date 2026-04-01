@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wedding Chapter — Katie &amp; Chris · chapters.life</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════
+   TOKENS — Chapters palette
+═══════════════════════════ */
+:root {
+  --void:#09080A; --deep:#100E14; --surface:#17141D; --raised:#1F1B28;
+  --border:rgba(255,255,255,.07); --border2:rgba(255,255,255,.13);
+  --t1:#F5F0E8; --t2:#A89D8E; --t3:#6B6058; --t4:#3A342E;
+  --gold:#D4A843; --gold2:#F0C466; --gold3:#8A6A1E;
+  --crimson:#9C2B45; --forest:#2A5235; --slate:#2E3D5C; --copper:#8B4513; --teal:#1A5C63;
+  --rose:#C4716A; --rose2:#E8998A; --rose3:#7A3A35;
+  --grn:#3DAA75; --org:#C4813A; --red:#C45050;
+  --display:'Fraunces',Georgia,serif;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Instrument Serif',Georgia,serif;
+  --mono:'DM Mono',monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--void);color:var(--t1);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--void)}
+::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,var(--rose3),var(--gold3));border-radius:2px}
+
+/* ── STARS ── */
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--dur,3s) var(--delay,0s) infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.5)}50%{opacity:var(--op,.5);transform:scale(1)}}
+
+/* ── PROGRESS ── */
+#progress{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--rose3),var(--gold),var(--rose2));z-index:300;transition:width .06s linear;box-shadow:0 0 8px rgba(196,113,106,.5)}
+
+/* ── BETA BANNER ── */
+.beta-banner{background:linear-gradient(135deg,rgba(212,168,67,.12),rgba(196,113,106,.08));border-bottom:1px solid rgba(212,168,67,.25);padding:10px 40px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative;z-index:199}
+.beta-badge{font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);padding:3px 10px;border:1px solid rgba(212,168,67,.4);border-radius:2px;background:rgba(212,168,67,.08)}
+.beta-txt{font-family:var(--mono);font-size:9.5px;color:var(--t3);letter-spacing:.5px}
+.beta-txt strong{color:var(--gold2)}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;left:0;right:0;z-index:200;height:52px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,8,10,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-shelf{display:flex;align-items:flex-end;gap:3px}
+.nav-book{border-radius:2px 2px 0 0}
+.nav-name{font-family:var(--display);font-size:18px;font-weight:700;color:var(--t1);letter-spacing:-.5px}
+.nav-mid{display:flex;align-items:center;gap:12px}
+.nav-chapter{font-family:var(--mono);font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose2);padding:3px 10px;border:1px solid rgba(196,113,106,.25);border-radius:2px;background:rgba(196,113,106,.05)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-pill{font-family:var(--mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);padding:5px 12px;border:1px solid var(--border2);border-radius:2px}
+.nav-pill em{color:var(--gold);font-style:normal}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 48px 60px;position:relative;overflow:hidden;background:var(--void)}
+.hero-glow1{position:absolute;width:900px;height:900px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(196,113,106,.07) 0%,transparent 60%);top:-300px;left:-200px}
+.hero-glow2{position:absolute;width:700px;height:700px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(212,168,67,.06) 0%,transparent 60%);bottom:-250px;right:-150px}
+.hero-inner{position:relative;z-index:2;max-width:880px}
+.h-eyebrow{display:inline-flex;align-items:center;gap:16px;font-family:var(--mono);font-size:8.5px;letter-spacing:4px;text-transform:uppercase;color:var(--rose2);margin-bottom:28px;animation:rise .8s ease both}
+.h-eyebrow::before,.h-eyebrow::after{content:'';display:block;width:40px;height:1px}
+.h-eyebrow::before{background:linear-gradient(to right,transparent,var(--rose2))}
+.h-eyebrow::after{background:linear-gradient(to left,transparent,var(--rose2))}
+.h-title{font-family:var(--display);font-size:clamp(52px,10vw,106px);font-weight:700;line-height:.92;letter-spacing:-3px;color:var(--t1);margin-bottom:12px;animation:rise .9s .1s ease both}
+.h-title em{font-style:italic;font-weight:300;color:var(--gold2)}
+.h-couple{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.5vw,26px);color:var(--rose2);margin-bottom:8px;animation:rise .9s .15s ease both}
+.h-sub{font-family:var(--body);font-size:clamp(14px,1.8vw,18px);color:var(--t2);line-height:1.6;margin-bottom:44px;animation:rise .9s .2s ease both}
+
+/* Life arc */
+.arc-wrap{position:relative;width:100%;max-width:820px;height:80px;margin:0 auto 44px;animation:rise .9s .3s ease both}
+.arc-wrap svg{width:100%;height:100%;overflow:visible}
+.arc-nodes{position:absolute;top:0;left:0;width:100%;height:100%}
+.arc-node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:5px}
+.arc-dot{width:11px;height:11px;border-radius:50%;background:var(--deep);border:1.5px solid var(--t4);transition:all .3s}
+.arc-dot.done{background:var(--gold3);border-color:var(--gold)}
+.arc-dot.now{width:18px;height:18px;background:var(--rose);border-color:var(--rose2);border-width:2px;box-shadow:0 0 16px rgba(196,113,106,.5),0 0 32px rgba(196,113,106,.2)}
+.arc-lbl{font-family:var(--mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);white-space:nowrap}
+.arc-lbl.now{color:var(--rose2)}
+.arc-date{font-family:var(--mono);font-size:7px;color:var(--t4)}
+
+/* Stats strip */
+.stats-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);max-width:820px;margin:0 auto;animation:rise .9s .4s ease both}
+.sc{background:var(--void);padding:15px 10px;text-align:center;transition:background .2s;cursor:default}
+.sc:hover{background:var(--surface)}
+.sc-val{font-family:var(--display);font-size:22px;font-weight:700;display:block;margin-bottom:3px}
+.sc-lbl{font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--t3)}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+/* ── HARVEY BALL SMILEY ── */
+.smiley{
+  display:inline-block;width:36px;height:36px;border-radius:50%;
+  background:#FFD700;border:2.5px solid #D4A843;
+  position:relative;flex-shrink:0;
+  box-shadow:0 0 12px rgba(255,215,0,.25);
+  animation:smilePulse 3s ease-in-out infinite;
+}
+.smiley-sm{width:22px;height:22px;border-width:1.5px;animation-delay:.5s}
+.smiley-xs{width:16px;height:16px;border-width:1px;animation:none;opacity:.7}
+@keyframes smilePulse{
+  0%,100%{box-shadow:0 0 8px rgba(255,215,0,.2)}
+  50%{box-shadow:0 0 18px rgba(255,215,0,.45)}
+}
+.smiley::before{ /* eyes */
+  content:'';position:absolute;
+  top:32%;left:50%;transform:translateX(-50%);
+  width:58%;height:2.5px;
+  background:transparent;
+  box-shadow:-28% 0 0 2px #222, 28% 0 0 2px #222;
+}
+.smiley::after{ /* smile */
+  content:'';position:absolute;
+  bottom:26%;left:50%;transform:translateX(-50%);
+  width:50%;height:50%;
+  border:2.5px solid #222;
+  border-top:none;border-radius:0 0 50px 50px;
+}
+.smiley-sm::after{border-width:2px}
+.smiley-xs::after{border-width:1.5px}
+
+/* Harvey Ball tribute tooltip */
+.harvey-wrap{position:relative;display:inline-flex;align-items:center;cursor:default}
+.harvey-tip{
+  position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  background:var(--raised);border:1px solid rgba(255,215,0,.3);
+  padding:8px 12px;white-space:nowrap;pointer-events:none;
+  font-family:var(--mono);font-size:8px;letter-spacing:1px;color:var(--gold2);
+  opacity:0;transition:opacity .2s;z-index:10;
+  border-bottom:2px solid #FFD700;
+}
+.harvey-tip::after{
+  content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:rgba(255,215,0,.3);
+}
+.harvey-wrap:hover .harvey-tip{opacity:1}
+
+/* ════════════════════════════════
+   LOGIN SCREEN
+════════════════════════════════ */
+#loginScreen{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--void);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+#loginScreen.hidden{display:none}
+
+/* ── Petal canvas sits behind login card ── */
+#petalCanvas{position:absolute;inset:0;pointer-events:none;z-index:0}
+
+/* ── Bell SVG animation ── */
+.bell-wrap{position:relative;z-index:2;display:flex;justify-content:center;gap:18px;margin-bottom:28px}
+.bell{width:52px;height:52px;transform-origin:50% 0%;animation:swing 2.4s ease-in-out infinite}
+.bell:nth-child(2){animation-delay:.3s;animation-direction:alternate-reverse}
+@keyframes swing{
+  0%,100%{transform:rotate(-22deg)}
+  50%{transform:rotate(22deg)}
+}
+.bell-shine{animation:shine 2.4s ease-in-out infinite}
+.bell:nth-child(2) .bell-shine{animation-delay:.3s}
+@keyframes shine{0%,100%{opacity:.15}50%{opacity:.5}}
+
+/* ── Login card ── */
+.login-card{
+  position:relative;z-index:2;
+  background:rgba(15,13,19,.92);
+  border:1px solid rgba(196,113,106,.3);
+  padding:40px 44px 36px;
+  width:100%;max-width:400px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 0 60px rgba(196,113,106,.08),0 0 120px rgba(0,0,0,.6);
+  animation:rise .7s ease both;
+}
+.login-eyebrow{
+  font-family:var(--mono);font-size:8px;letter-spacing:3.5px;text-transform:uppercase;
+  color:var(--rose2);margin-bottom:10px;text-align:center;
+}
+.login-title{
+  font-family:var(--display);font-size:28px;font-weight:700;letter-spacing:-.5px;
+  color:var(--t1);margin-bottom:4px;text-align:center;line-height:1.2;
+}
+.login-title em{font-style:italic;color:var(--gold2);font-weight:300}
+.login-sub{
+  font-family:var(--body);font-size:13px;color:var(--t3);
+  text-align:center;margin-bottom:28px;line-height:1.6;
+}
+.login-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--t3);display:block;margin-bottom:7px;
+}
+.login-input{
+  width:100%;padding:11px 14px;
+  background:var(--raised);border:1px solid var(--border2);
+  color:var(--t1);font-family:var(--mono);font-size:13px;
+  outline:none;transition:border-color .15s;margin-bottom:16px;
+  letter-spacing:1px;
+}
+.login-input:focus{border-color:rgba(196,113,106,.5)}
+.login-btn{
+  width:100%;padding:13px;
+  background:linear-gradient(135deg,rgba(196,113,106,.25),rgba(212,168,67,.12));
+  border:1px solid rgba(196,113,106,.5);
+  font-family:var(--mono);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--rose2);cursor:pointer;transition:all .2s;
+  margin-top:4px;
+}
+.login-btn:hover{
+  background:linear-gradient(135deg,rgba(196,113,106,.4),rgba(212,168,67,.2));
+  border-color:var(--rose2);color:var(--t1);
+}
+.login-error{
+  font-family:var(--mono);font-size:9px;letter-spacing:1px;
+  color:var(--red);text-align:center;margin-top:10px;
+  height:16px;transition:opacity .2s;
+}
+.login-footer{
+  margin-top:22px;text-align:center;
+  font-family:var(--mono);font-size:8px;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--t4);
+}
+.login-footer span{color:var(--rose2)}
+
+/* ── Floating bells in background ── */
+.bg-bell{
+  position:absolute;pointer-events:none;z-index:1;
+  opacity:0;animation:floatBell var(--fb-dur,12s) var(--fb-delay,0s) infinite ease-in-out;
+}
+@keyframes floatBell{
+  0%{opacity:0;transform:translateY(0) rotate(0deg) scale(.6)}
+  10%{opacity:.07}
+  80%{opacity:.04}
+  100%{opacity:0;transform:translateY(-110vh) rotate(360deg) scale(1)}
+}
+
+/* ── BELLS in main app (hero area) ── */
+.hero-bells{
+  display:flex;justify-content:center;gap:28px;margin-bottom:20px;
+  animation:rise .9s .05s ease both;
+}
+.hero-bell{width:36px;height:36px;transform-origin:50% 0%;animation:swing 3s ease-in-out infinite;opacity:.7}
+.hero-bell:nth-child(2){animation-delay:.4s;animation-duration:2.7s}
+.hero-bell:nth-child(3){animation-delay:.8s}
+
+/* ── Logout button ── */
+.logout-btn{
+  font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--t4);padding:5px 12px;border:1px solid var(--border);
+  background:none;cursor:pointer;transition:all .15s;
+}
+.logout-btn:hover{color:var(--rose2);border-color:rgba(196,113,106,.3)}
+
+/* ── Rose petals (canvas-drawn, but also some CSS ones) ── */
+.petal{
+  position:absolute;pointer-events:none;z-index:1;
+  width:8px;height:12px;border-radius:50% 0 50% 0;
+  background:var(--rose);opacity:0;
+  animation:petalFall var(--p-dur,8s) var(--p-delay,0s) infinite linear;
+}
+@keyframes petalFall{
+  0%{opacity:0;transform:translateY(-20px) rotate(0deg)}
+  5%{opacity:.35}
+  90%{opacity:.15}
+  100%{opacity:0;transform:translateY(100vh) rotate(720deg) translateX(60px)}
+}
+
+
+/* ── SETUP WIZARD ── */
+.setup-wrap{background:linear-gradient(135deg,rgba(196,113,106,.06),rgba(212,168,67,.04));border:1px solid rgba(212,168,67,.2);padding:28px 32px;margin:0 auto 32px;max-width:820px;position:relative;z-index:2}
+.setup-eyebrow{font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.setup-title{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.setup-title em{font-style:italic;color:var(--gold2);font-weight:300}
+.setup-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.setup-field label{font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--t3);display:block;margin-bottom:6px}
+.setup-field input{width:100%;padding:9px 13px;background:var(--raised);border:1px solid var(--border2);color:var(--t1);font-family:var(--body);font-size:14px;outline:none;transition:border-color .15s}
+.setup-field input:focus{border-color:rgba(212,168,67,.5)}
+.setup-field input::placeholder{color:var(--t3)}
+.setup-btn{display:inline-flex;align-items:center;gap:10px;padding:11px 26px;background:linear-gradient(135deg,rgba(212,168,67,.2),rgba(196,113,106,.1));border:1px solid rgba(212,168,67,.4);font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);cursor:pointer;transition:all .2s}
+.setup-btn:hover{background:linear-gradient(135deg,rgba(212,168,67,.3),rgba(196,113,106,.18));border-color:var(--gold)}
+
+/* ── MAIN ── */
+.main{max-width:1200px;margin:0 auto;padding:0 40px 100px;position:relative;z-index:1}
+
+/* ── TABS ── */
+.tabs-bar{position:sticky;top:52px;z-index:100;background:rgba(9,8,10,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 40px;margin:0 -40px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.tabs-bar::-webkit-scrollbar{display:none}
+.tb{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:14px 18px;cursor:pointer;color:var(--t3);border-bottom:2px solid transparent;white-space:nowrap;transition:all .15s;background:none;border-top:none;border-left:none;border-right:none}
+.tb:hover{color:var(--t2)}
+.tb.on{color:var(--rose2);border-bottom-color:var(--rose)}
+.pg{display:none;padding-top:28px}
+.pg.on{display:block}
+
+/* ── KPI ROW ── */
+.krow{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--border);border:1px solid var(--border2);margin-bottom:22px}
+.kpi{background:var(--void);padding:14px 15px;cursor:default;transition:background .15s}
+.kpi:hover{background:var(--surface)}
+.kl{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:5px}
+.kv{font-family:var(--display);font-size:20px;font-weight:700}
+.kv.g{color:var(--gold)} .kv.r{color:var(--rose2)} .kv.grn{color:var(--grn)}
+.kv.o{color:var(--org)} .kv.d{color:var(--t3)} .kv.red{color:var(--red)}
+.ks{font-family:var(--mono);font-size:8px;color:var(--t3);margin-top:2px}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1px solid var(--border2);padding:20px 22px;margin-bottom:16px;transition:border-color .2s}
+.card:hover{border-color:rgba(196,113,106,.18)}
+.ch{font-family:var(--mono);font-size:8.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--t3);margin-bottom:13px;display:flex;justify-content:space-between;align-items:center}
+.ch em{color:var(--gold);font-style:normal}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:16px}
+
+/* ── ALERTS ── */
+.alert{border-radius:0;padding:18px 22px;margin-bottom:16px}
+.alert.gold{background:linear-gradient(135deg,rgba(212,168,67,.05),transparent);border:1px solid rgba(212,168,67,.2);border-left:4px solid var(--gold)}
+.alert.rose{background:linear-gradient(135deg,rgba(196,113,106,.05),transparent);border:1px solid rgba(196,113,106,.2);border-left:4px solid var(--rose)}
+.alert.red{background:linear-gradient(135deg,rgba(196,80,80,.05),transparent);border:1px solid rgba(196,80,80,.2);border-left:4px solid var(--red)}
+.alert.grn{background:linear-gradient(135deg,rgba(61,170,117,.05),transparent);border:1px solid rgba(61,170,117,.2);border-left:4px solid var(--grn)}
+.alert-lbl{font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;margin-bottom:7px}
+.alert.gold .alert-lbl{color:var(--gold3)} .alert.rose .alert-lbl{color:var(--rose3)}
+.alert.red .alert-lbl{color:var(--red)} .alert.grn .alert-lbl{color:var(--grn)}
+.alert p{font-family:var(--body);font-size:13px;color:var(--t2);line-height:1.75}
+.alert p strong{color:var(--t1)}
+
+/* ── TABLE ── */
+.tw{overflow-x:auto;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);padding:8px 11px;text-align:left;border-bottom:1px solid var(--border2);background:var(--deep);white-space:nowrap}
+td{padding:9px 11px;border-bottom:1px solid rgba(255,255,255,.035);vertical-align:top;font-family:var(--body)}
+tr:hover td{background:rgba(255,255,255,.013)}
+tr:last-child td{border-bottom:none}
+.mn{font-family:var(--mono);font-size:11px}
+.gc{color:var(--gold)} .rc{color:var(--rose2)} .oc{color:var(--org)} .dc{color:var(--t3)} .ec{color:var(--red)} .nc{color:var(--grn)}
+
+/* ── BADGE ── */
+.bdg{display:inline-flex;font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:2px;border:1px solid;white-space:nowrap}
+.bdg.grn{background:rgba(61,170,117,.1);border-color:rgba(61,170,117,.28);color:var(--grn)}
+.bdg.gold{background:rgba(212,168,67,.1);border-color:rgba(212,168,67,.28);color:var(--gold)}
+.bdg.rose{background:rgba(196,113,106,.1);border-color:rgba(196,113,106,.28);color:var(--rose2)}
+.bdg.org{background:rgba(196,129,58,.1);border-color:rgba(196,129,58,.28);color:var(--org)}
+.bdg.red{background:rgba(196,80,80,.1);border-color:rgba(196,80,80,.28);color:var(--red)}
+.bdg.dim{background:rgba(58,52,46,.3);border-color:rgba(107,96,88,.3);color:var(--t3)}
+.bdg.purp{background:rgba(120,80,160,.1);border-color:rgba(120,80,160,.28);color:#A87FD4}
+
+/* ── CHECKLIST ── */
+.cl-item{display:flex;align-items:flex-start;gap:11px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.cl-item:last-child{border-bottom:none}
+.cb{width:17px;height:17px;border-radius:2px;border:1px solid var(--border2);background:var(--deep);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s;margin-top:2px}
+.cb:hover{border-color:var(--rose2)}
+.cb.on{background:rgba(61,170,117,.15);border-color:var(--grn);color:var(--grn)}
+.cl-txt{flex:1;font-size:13px;color:var(--t2);line-height:1.5;font-family:var(--body)}
+.cl-txt.done{text-decoration:line-through;opacity:.35}
+.cl-meta{display:flex;gap:6px;align-items:center;flex-shrink:0}
+
+/* ── PROG BAR ── */
+.pb-wrap{background:var(--border);border-radius:3px;height:5px;overflow:hidden;margin:3px 0}
+.pb-fill{height:100%;border-radius:3px;transition:width .4s}
+.pb-rose{background:linear-gradient(90deg,var(--rose3),var(--rose2))}
+.pb-gold{background:linear-gradient(90deg,var(--gold3),var(--gold))}
+.pb-grn{background:linear-gradient(90deg,#1E7A50,var(--grn))}
+.pb-lbls{display:flex;justify-content:space-between;font-family:var(--mono);font-size:8.5px;color:var(--t3);margin-top:3px}
+
+/* ── VENDOR CARDS ── */
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:11px;margin-top:8px}
+.vc{background:var(--raised);border:1px solid var(--border);padding:15px 17px;position:relative;overflow:hidden;transition:all .2s}
+.vc:hover{border-color:rgba(196,113,106,.2);background:var(--surface)}
+.vc-sp{position:absolute;left:0;top:0;bottom:0;width:3px}
+.vc-sp.paid{background:var(--grn)} .vc-sp.partial{background:var(--gold3)} .vc-sp.due{background:var(--red)} .vc-sp.ready{background:var(--org)} .vc-sp.empty{background:var(--border2)}
+.vc-cat{font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:3px;padding-left:10px}
+.vc-name{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--t1);margin-bottom:2px;padding-left:10px}
+.vc-person{font-size:12px;color:var(--t2);padding-left:10px;margin-bottom:9px}
+.vc-foot{display:flex;justify-content:space-between;align-items:flex-end;padding-top:9px;border-top:1px solid var(--border);padding-left:10px}
+.vc-contact{font-family:var(--mono);font-size:9px;color:var(--t3);line-height:1.9}
+
+/* ── TIMELINE ── */
+.tl{position:relative;padding-left:26px}
+.tl::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--border2)}
+.tl-item{position:relative;margin-bottom:17px}
+.tl-dot{position:absolute;left:-23px;top:5px;width:10px;height:10px;border-radius:50%;border:2px solid var(--border2);background:var(--void);transition:all .3s}
+.tl-dot.done{background:var(--grn);border-color:var(--grn)}
+.tl-dot.now{background:var(--rose);border-color:var(--rose2);box-shadow:0 0 10px rgba(196,113,106,.5)}
+.tl-dot.key{border-color:var(--gold2)}
+.tl-time{font-family:var(--mono);font-size:8.5px;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.tl-time.now{color:var(--rose2)}
+.tl-title{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--t1);margin-bottom:3px}
+.tl-desc{font-size:12px;color:var(--t2);line-height:1.6;font-family:var(--body)}
+
+/* ── PARTY GRID ── */
+.pg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:10px}
+.pm{background:var(--raised);border:1px solid var(--border);padding:13px 15px;transition:border-color .2s}
+.pm:hover{border-color:rgba(196,113,106,.2)}
+.pm.vip{border-color:rgba(212,168,67,.2)}
+.pm-role{font-family:var(--mono);font-size:8px;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.pm-name{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px}
+.pm-contact{font-family:var(--mono);font-size:10px;color:var(--t2);line-height:1.8}
+
+/* ── DOT TIMELINE (day-of) ── */
+.dot-tl{display:flex;align-items:stretch;overflow-x:auto;padding-bottom:4px;margin-bottom:20px;scrollbar-width:none}
+.dot-tl::-webkit-scrollbar{display:none}
+.dt-item{flex:1;min-width:88px;text-align:center;position:relative}
+.dt-item::before{content:'';position:absolute;top:11px;left:0;right:50%;height:1px;background:var(--border2)}
+.dt-item::after{content:'';position:absolute;top:11px;left:50%;right:0;height:1px;background:var(--border2)}
+.dt-item:first-child::before,.dt-item:last-child::after{display:none}
+.dt-dot{width:22px;height:22px;border-radius:50%;border:2px solid var(--border2);background:var(--void);margin:0 auto 6px;position:relative;z-index:1;transition:all .3s}
+.dt-dot.key{background:var(--rose);border-color:var(--rose2);box-shadow:0 0 12px rgba(196,113,106,.4)}
+.dt-time{font-family:var(--mono);font-size:9px;color:var(--rose2);display:block;margin-bottom:2px}
+.dt-lbl{font-family:var(--body);font-size:10px;color:var(--t2);line-height:1.4;padding:0 3px}
+
+/* ── MUSIC ── */
+.music-row{display:flex;align-items:center;gap:13px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.035)}
+.music-row:last-child{border-bottom:none}
+.mr-moment{font-family:var(--serif);font-size:13px;font-weight:600;flex:1}
+.mr-song{font-family:var(--body);font-style:italic;font-size:12px;color:var(--t2);flex:1.2}
+.mr-status{font-family:var(--mono);font-size:8px;letter-spacing:.06em;padding:3px 9px;border-radius:2px;border:1px solid;flex-shrink:0;text-transform:uppercase}
+.mr-status.urgent{background:rgba(196,80,80,.08);border-color:rgba(196,80,80,.25);color:var(--red)}
+.mr-status.pending{background:rgba(196,129,58,.08);border-color:rgba(196,129,58,.25);color:var(--org)}
+.mr-status.booked{background:rgba(61,170,117,.08);border-color:rgba(61,170,117,.25);color:var(--grn)}
+
+/* ── ROOM CARDS ── */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:8px}
+.rm{background:var(--raised);border:1px solid var(--border);padding:12px 14px}
+.rm.vip{border-color:rgba(196,113,106,.3);background:linear-gradient(135deg,rgba(196,113,106,.04),var(--raised))}
+.rm-type{font-family:var(--mono);font-size:8px;letter-spacing:.07em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.rm-who{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--t1);margin-bottom:2px}
+.rm-note{font-size:11px;color:var(--t2)}
+
+/* ── OPEN ITEMS ── */
+.oi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(305px,1fr));gap:10px;margin-top:10px}
+.oi{background:var(--raised);border:1px solid var(--border);padding:13px 15px;position:relative;overflow:hidden;transition:border-color .2s}
+.oi::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.oi.crit::before{background:var(--red)} .oi.high::before{background:var(--org)} .oi.med::before{background:var(--gold3)}
+.oi-rank{font-family:var(--mono);font-size:8px;color:var(--t3);margin-bottom:3px;padding-left:9px}
+.oi-title{font-family:var(--serif);font-size:14px;font-weight:600;color:var(--t1);margin-bottom:4px;padding-left:9px}
+.oi-note{font-size:12px;color:var(--t2);line-height:1.6;padding-left:9px}
+
+/* ── BUDGET BARS ── */
+.bb-row{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.bb-row:last-child{border-bottom:none}
+.bb-cat{font-family:var(--body);font-size:12px;color:var(--t1);width:195px;flex-shrink:0}
+.bb-track{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.bb-fill{height:100%;border-radius:3px}
+.bb-amt{font-family:var(--mono);font-size:11px;text-align:right;width:85px;flex-shrink:0}
+.bb-pct{font-family:var(--mono);font-size:9px;color:var(--t3);width:34px;text-align:right;flex-shrink:0}
+
+/* ── STORY PULL ── */
+.story-pull{font-family:var(--display);font-size:clamp(18px,3vw,28px);font-style:italic;font-weight:400;color:var(--t1);line-height:1.3;margin-bottom:14px;border-left:3px solid var(--rose2);padding-left:18px}
+.story-pull em{color:var(--gold2)}
+.story-dates{display:flex;gap:24px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--border)}
+.sdd{text-align:center}
+.sdd-d{font-family:var(--mono);font-size:10px;color:var(--rose2)}
+.sdd-e{font-size:12px;color:var(--t2);margin-top:2px}
+
+/* ── COUNTDOWN BAR ── */
+.cd-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;border:1px solid rgba(196,113,106,.2);border-left:4px solid var(--rose);padding:16px 22px;background:linear-gradient(135deg,rgba(196,113,106,.05),transparent);margin-bottom:22px}
+.cd-l .cd-lbl{font-family:var(--mono);font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--rose2);margin-bottom:5px}
+.cd-l .cd-main{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-1px}
+.cd-l .cd-main span{color:var(--rose2)}
+.cd-units{display:flex;gap:22px}
+.cd-unit{text-align:center}
+.cd-val{font-family:var(--display);font-size:24px;font-weight:700;color:var(--rose2);display:block}
+.cd-key{font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-top:2px}
+.cd-r{text-align:right}
+.cd-r .cd-venue{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--t1)}
+.cd-r .cd-sub{font-family:var(--mono);font-size:9px;color:var(--t3);margin-top:4px}
+
+/* ── HR ── */
+.hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.chip{display:inline-block;font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(120,80,160,.3);background:rgba(120,80,160,.08);color:#A87FD4;border-radius:2px;margin-top:5px}
+
+/* ── INPUT FIELDS (inline edit) ── */
+.editable{background:rgba(255,255,255,.03);border:1px dashed var(--border2);color:var(--t1);font-family:var(--body);font-size:13px;padding:5px 9px;outline:none;width:100%;transition:border-color .15s;resize:none}
+.editable:focus{border-color:rgba(212,168,67,.4);background:rgba(255,255,255,.05)}
+.editable::placeholder{color:var(--t3);font-style:italic}
+
+/* ── SESSIONS ── */
+.sessions-layout{display:grid;grid-template-columns:280px 1fr;gap:0;min-height:70vh;border:1px solid var(--border2)}
+.sess-sidebar{background:rgba(16,14,20,.98);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden}
+.ss-head{padding:18px 18px 12px;border-bottom:1px solid var(--border);flex-shrink:0}
+.ss-title{font-family:var(--display);font-size:16px;font-weight:700;letter-spacing:-.5px;color:var(--t1);margin-bottom:3px}
+.ss-sub{font-family:var(--mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--t3)}
+.new-session-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:11px;padding:10px 14px;background:linear-gradient(135deg,rgba(196,113,106,.15),rgba(212,168,67,.07));border:1px solid rgba(196,113,106,.3);font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rose2);cursor:pointer;transition:all .2s}
+.new-session-btn:hover{background:linear-gradient(135deg,rgba(196,113,106,.25),rgba(212,168,67,.12));border-color:rgba(196,113,106,.5)}
+.ss-search{padding:10px 18px;border-bottom:1px solid var(--border);flex-shrink:0}
+.ss-search input{width:100%;padding:7px 11px;background:var(--deep);border:1px solid var(--border2);color:var(--t1);font-family:var(--mono);font-size:10px;outline:none;transition:border-color .15s}
+.ss-search input::placeholder{color:var(--t3)}
+.ss-search input:focus{border-color:rgba(196,113,106,.4)}
+.sess-list{flex:1;overflow-y:auto;padding:6px 0;scrollbar-width:thin;scrollbar-color:var(--border2) transparent}
+.sess-list::-webkit-scrollbar{width:3px}
+.sess-list::-webkit-scrollbar-thumb{background:var(--border2)}
+.si{padding:11px 18px;cursor:pointer;border-left:3px solid transparent;transition:all .15s}
+.si:hover{background:rgba(255,255,255,.025)}
+.si.on{background:rgba(196,113,106,.06);border-left-color:var(--rose)}
+.si-date{font-family:var(--mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.si-title{font-family:var(--serif);font-size:13px;font-weight:600;color:var(--t1);margin-bottom:3px;line-height:1.3}
+.si-prev{font-size:11px;color:var(--t3);line-height:1.4;font-family:var(--body)}
+.si-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
+.si-tag{font-family:var(--mono);font-size:7px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:2px;border:1px solid}
+.si-tag.rose{background:rgba(196,113,106,.08);border-color:rgba(196,113,106,.2);color:var(--rose2)}
+.si-tag.gold{background:rgba(212,168,67,.08);border-color:rgba(212,168,67,.2);color:var(--gold)}
+.si-tag.grn{background:rgba(61,170,117,.08);border-color:rgba(61,170,117,.2);color:var(--grn)}
+.si-tag.red{background:rgba(196,80,80,.08);border-color:rgba(196,80,80,.2);color:var(--red)}
+.si-del{float:right;display:none;background:none;border:none;color:var(--t3);cursor:pointer;font-size:12px;padding:0;transition:color .15s}
+.si:hover .si-del{display:inline}
+.si-del:hover{color:var(--red)}
+.ss-stats{padding:12px 18px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:8px;flex-shrink:0}
+.sss{text-align:center}
+.sss-v{font-family:var(--display);font-size:18px;font-weight:700;color:var(--gold)}
+.sss-l{font-family:var(--mono);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3)}
+.sess-main{display:flex;flex-direction:column;background:var(--surface)}
+.sess-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 32px;min-height:400px}
+.se-icon{font-size:52px;margin-bottom:24px;opacity:.7}
+.se-title{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-1px;color:var(--t1);margin-bottom:10px}
+.se-title em{font-style:italic;color:var(--gold2);font-weight:300}
+.se-body{font-family:var(--body);font-size:14px;color:var(--t2);line-height:1.7;max-width:380px;margin-bottom:28px}
+.se-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;background:linear-gradient(135deg,rgba(196,113,106,.2),rgba(212,168,67,.1));border:1px solid rgba(196,113,106,.4);font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rose2);cursor:pointer;transition:all .2s}
+.se-cta:hover{background:linear-gradient(135deg,rgba(196,113,106,.3),rgba(212,168,67,.15))}
+.composer{flex:1;padding:28px 32px;display:none;flex-direction:column;overflow-y:auto}
+.composer.open{display:flex}
+.comp-eyebrow{font-family:var(--mono);font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--rose2);margin-bottom:7px;display:block}
+.comp-title{font-family:var(--display);font-size:24px;font-weight:700;letter-spacing:-1px;margin-bottom:20px}
+.comp-title em{font-style:italic;color:var(--gold2);font-weight:300}
+.fl{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--t3);margin-bottom:7px;display:block}
+.fi{width:100%;padding:9px 13px;background:var(--raised);border:1px solid var(--border2);color:var(--t1);font-family:var(--body);font-size:14px;outline:none;transition:border-color .15s;margin-bottom:14px}
+.fi:focus{border-color:rgba(196,113,106,.5)}
+.fi::placeholder{color:var(--t3)}
+.fi.mono-font{font-family:var(--mono);font-size:11px}
+select.fi{font-family:var(--mono);font-size:11px}
+select.fi option{background:var(--deep)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:0}
+textarea.fi{min-height:180px;resize:vertical;line-height:1.75}
+.zone-hint{font-family:var(--mono);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;color:var(--t3);margin-top:-10px;margin-bottom:16px}
+.proc-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:13px 22px;margin:14px 0;background:linear-gradient(135deg,var(--rose3),rgba(196,113,106,.3));border:1px solid rgba(196,113,106,.5);font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rose2);cursor:pointer;transition:all .2s}
+.proc-btn:hover:not(:disabled){background:linear-gradient(135deg,rgba(122,58,53,.8),rgba(196,113,106,.4));border-color:var(--rose2);color:var(--t1)}
+.proc-btn:disabled{opacity:.5;cursor:not-allowed}
+.ldots{display:inline-flex;gap:4px;align-items:center}
+.ldots span{width:5px;height:5px;border-radius:50%;background:var(--rose2);animation:lpulse .8s ease-in-out infinite}
+.ldots span:nth-child(2){animation-delay:.15s} .ldots span:nth-child(3){animation-delay:.3s}
+@keyframes lpulse{0%,100%{opacity:.3;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
+.ai-prev{border:1px solid rgba(196,113,106,.2);margin-bottom:14px;display:none}
+.ai-prev.open{display:block}
+.ai-prev-head{padding:9px 15px;background:rgba(196,113,106,.06);border-bottom:1px solid rgba(196,113,106,.15);display:flex;align-items:center;justify-content:space-between}
+.ai-prev-lbl{font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--rose2)}
+.ai-prev-body{padding:16px;max-height:340px;overflow-y:auto}
+.ai-sec{margin-bottom:13px}
+.ai-sec-head{font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:7px;padding-bottom:5px;border-bottom:1px solid rgba(212,168,67,.12)}
+.ai-line{font-size:12px;color:var(--t2);font-family:var(--body);padding:3px 0;line-height:1.5;display:flex;gap:7px}
+.ai-line::before{content:'→';color:var(--rose2);flex-shrink:0;font-family:var(--mono);font-size:10px}
+.save-btn{display:none;align-items:center;justify-content:center;gap:10px;width:100%;padding:13px 22px;background:linear-gradient(135deg,rgba(61,170,117,.15),rgba(61,170,117,.05));border:1px solid rgba(61,170,117,.4);font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grn);cursor:pointer;transition:all .2s}
+.save-btn.open{display:flex}
+.save-btn:hover{background:linear-gradient(135deg,rgba(61,170,117,.25),rgba(61,170,117,.1));border-color:var(--grn);color:var(--t1)}
+.cancel-link{display:block;text-align:center;margin-top:10px;font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);cursor:pointer;padding:7px;background:none;border:none;transition:color .15s}
+.cancel-link:hover{color:var(--t2)}
+.sess-detail{flex:1;padding:28px 32px;display:none;flex-direction:column;overflow-y:auto}
+.sess-detail.open{display:flex}
+.sd-eyebrow{font-family:var(--mono);font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--rose2);margin-bottom:7px;display:flex;align-items:center;gap:12px}
+.sd-back{cursor:pointer;color:var(--t3);transition:color .15s;display:flex;align-items:center;gap:4px;background:none;border:none;font-family:var(--mono);font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--t3)}
+.sd-back:hover{color:var(--rose2)}
+.sd-title{font-family:var(--display);font-size:clamp(18px,2.5vw,26px);font-weight:700;letter-spacing:-1px;margin-bottom:8px;line-height:1.2}
+.sd-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px;font-family:var(--mono);font-size:9px;color:var(--t3)}
+.mood-bar-wrap{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.mb-track{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.mb-fill{height:100%;border-radius:3px;transition:width .4s}
+.mb-lbl{font-family:var(--mono);font-size:9px;color:var(--t3);width:28px;text-align:right}
+.ns-title{font-family:var(--mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--t3);margin-bottom:9px;padding-bottom:5px;border-bottom:1px solid var(--border)}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px}
+.dc{background:var(--raised);border:1px solid var(--border);padding:10px 12px}
+.dc-cat{font-family:var(--mono);font-size:7.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.dc-item{font-family:var(--serif);font-size:12px;font-weight:600;color:var(--t1);margin-bottom:3px}
+.dc-out{font-size:11px;color:var(--t2);margin-bottom:5px;font-family:var(--body)}
+.dc-st{font-family:var(--mono);font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:2px;border:1px solid}
+.dc-st.decided{background:rgba(61,170,117,.08);border-color:rgba(61,170,117,.25);color:var(--grn)}
+.dc-st.tbd{background:rgba(196,129,58,.08);border-color:rgba(196,129,58,.25);color:var(--org)}
+.act-item{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.act-item:last-child{border-bottom:none}
+.act-cb{width:17px;height:17px;border-radius:2px;border:1px solid var(--border2);background:var(--deep);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
+.act-cb:hover{border-color:var(--grn)}
+.act-cb.on{background:rgba(61,170,117,.15);border-color:var(--grn);color:var(--grn)}
+.act-txt{flex:1;font-size:12px;color:var(--t2);font-family:var(--body)}
+.act-txt.done{text-decoration:line-through;opacity:.35}
+.act-owner{font-family:var(--mono);font-size:9px;color:var(--t3);flex-shrink:0}
+.note-item{display:flex;gap:9px;padding:5px 0;font-family:var(--body);font-size:12px;color:var(--t2);line-height:1.5}
+.nb{font-family:var(--mono);font-size:11px;flex-shrink:0;margin-top:1px}
+.nb.g{color:var(--gold)} .nb.r{color:var(--red)}
+.raw-btn{background:none;border:1px solid var(--border2);color:var(--t3);font-family:var(--mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;cursor:pointer;transition:all .15s}
+.raw-btn:hover{border-color:var(--border2);color:var(--t2)}
+.raw-box{display:none;margin-top:9px;padding:13px;background:var(--deep);border:1px solid var(--border);font-family:var(--mono);font-size:10px;color:var(--t3);line-height:1.7;max-height:200px;overflow-y:auto;white-space:pre-wrap;word-break:break-word}
+.raw-box.open{display:block}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:28px;right:28px;font-family:var(--mono);font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;padding:11px 20px;border:1px solid;border-radius:2px;z-index:999;opacity:0;transform:translateY(8px);transition:all .2s;pointer-events:none}
+.toast.show{opacity:1;transform:none}
+.toast.grn{background:rgba(61,170,117,.12);border-color:rgba(61,170,117,.3);color:var(--grn)}
+.toast.rose{background:rgba(196,113,106,.12);border-color:rgba(196,113,106,.3);color:var(--rose2)}
+
+/* ── FOOTER ── */
+footer.footer{background:var(--deep);border-top:1px solid var(--border);padding:40px 0 28px;position:relative;z-index:1}
+.footer-grid{max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px}
+.f-brand{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.f-sub{font-family:var(--mono);font-size:8.5px;color:var(--t4);line-height:2.1;letter-spacing:.03em}
+.f-ch{font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--t4);margin-bottom:11px}
+.f-links{display:flex;flex-direction:column;gap:8px}
+.f-links a{font-family:var(--mono);font-size:8.5px;color:var(--t3);text-decoration:none;transition:color .15s;letter-spacing:.03em}
+.f-links a:hover{color:var(--rose2)}
+.f-copy{max-width:1200px;margin:0 auto;padding:20px 40px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:8.5px;color:var(--t4);flex-wrap:wrap;gap:10px}
+
+@media(max-width:768px){
+  .nav{padding:0 20px}
+  .hero{padding:80px 24px 48px}
+  .main{padding:0 20px 80px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .g2{grid-template-columns:1fr}
+  .g3{grid-template-columns:1fr}
+  .sessions-layout{grid-template-columns:1fr}
+  .setup-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ════ LOGIN SCREEN ════ -->
+<div id="loginScreen">
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- Floating background bells -->
+  <div class="bg-bell" style="left:8%;top:100%;--fb-dur:14s;--fb-delay:0s;font-size:28px">🔔</div>
+  <div class="bg-bell" style="left:22%;top:100%;--fb-dur:11s;--fb-delay:2s;font-size:20px">🔔</div>
+  <div class="bg-bell" style="left:40%;top:100%;--fb-dur:16s;--fb-delay:5s;font-size:32px">🔔</div>
+  <div class="bg-bell" style="left:58%;top:100%;--fb-dur:13s;--fb-delay:1s;font-size:18px">🔔</div>
+  <div class="bg-bell" style="left:74%;top:100%;--fb-dur:15s;--fb-delay:3.5s;font-size:26px">🔔</div>
+  <div class="bg-bell" style="left:88%;top:100%;--fb-dur:10s;--fb-delay:7s;font-size:22px">🔔</div>
+  <div class="bg-bell" style="left:15%;top:100%;--fb-dur:18s;--fb-delay:9s;font-size:16px">🔔</div>
+  <div class="bg-bell" style="left:65%;top:100%;--fb-dur:12s;--fb-delay:4s;font-size:30px">🔔</div>
+
+  <div class="login-card">
+    <!-- Animated bells -->
+    <div class="bell-wrap">
+      <svg class="bell" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 6C26 6 14 12 14 26V36H38V26C38 12 26 6 26 6Z" fill="#C4716A" opacity=".9"/>
+        <path class="bell-shine" d="M20 14C20 14 18 20 18 26V30" stroke="#F5F0E8" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="22" y="36" width="8" height="4" rx="1" fill="#D4A843"/>
+        <circle cx="26" cy="42" r="3" fill="#D4A843"/>
+        <path d="M12 36H40" stroke="#D4A843" stroke-width="1.5"/>
+      </svg>
+      <svg class="bell" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26 6C26 6 14 12 14 26V36H38V26C38 12 26 6 26 6Z" fill="#E8998A" opacity=".85"/>
+        <path class="bell-shine" d="M20 14C20 14 18 20 18 26V30" stroke="#F5F0E8" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="22" y="36" width="8" height="4" rx="1" fill="#F0C466"/>
+        <circle cx="26" cy="42" r="3" fill="#F0C466"/>
+        <path d="M12 36H40" stroke="#F0C466" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <div class="login-eyebrow">chapters.life · The Wedding Chapter</div>
+    <h1 class="login-title">Katie &amp; <em>Chris</em></h1>
+    <p class="login-sub">Your private wedding planning workspace.<br>Enter your access code to continue.</p>
+
+    <label class="login-label">Access Code</label>
+    <input type="password" class="login-input" id="loginPass"
+      placeholder="••••••••"
+      onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="login-btn" onclick="doLogin()">✦ &nbsp; Enter My Chapter</button>
+    <div class="login-error" id="loginErr"></div>
+
+    <div class="login-footer" style="display:flex;align-items:center;justify-content:center;gap:8px"><span class="harvey-wrap"><span class="smiley smiley-xs"></span><span class="harvey-tip">😊 In memory of Harvey Ball · Inventor of the Smiley Face</span></span> Powered by <span>chapters.life</span> · Private Beta · C-01</div>
+  </div>
+</div>
+
+<div class="stars" id="stars"></div>
+<div id="progress"></div>
+
+<!-- BETA BANNER -->
+<div class="beta-banner">
+  <span class="beta-badge">Beta</span>
+  <span class="beta-txt">Welcome, <strong>Katie &amp; Chris</strong> <span class="harvey-wrap"><span class="smiley smiley-xs"></span><span class="harvey-tip">😊 In honor of Harvey Ball · Inventor of the Smiley Face</span></span> — Your Wedding Chapter is ready. You're chapters.life Beta Member #001.</span>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-brand" href="#">
+    <div class="nav-shelf">
+      <div class="nav-book" style="width:4px;height:11px;background:var(--crimson)"></div>
+      <div class="nav-book" style="width:6px;height:20px;background:var(--gold)"></div>
+      <div class="nav-book" style="width:4px;height:9px;background:var(--forest)"></div>
+      <div class="nav-book" style="width:5px;height:15px;background:var(--rose)"></div>
+    </div>
+    <span class="nav-name">chapters</span>
+  </a>
+  <div class="nav-mid">
+    <span class="nav-chapter">The Wedding Chapter · C-01</span>
+  </div>
+  <div class="nav-right">
+    <div class="nav-pill"><em id="navDays">—</em> days out</div>
+    <div class="nav-pill">Sessions: <em id="navSessCount">0</em></div>
+    <button class="logout-btn" onclick="doLogout()">Sign Out</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow1"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-bells">
+      <svg class="hero-bell" viewBox="0 0 52 52" fill="none"><path d="M26 6C26 6 14 12 14 26V36H38V26C38 12 26 6 26 6Z" fill="#C4716A" opacity=".8"/><rect x="22" y="36" width="8" height="4" rx="1" fill="#D4A843"/><circle cx="26" cy="42" r="3" fill="#D4A843"/><path d="M12 36H40" stroke="#D4A843" stroke-width="1.5"/></svg>
+      <svg class="hero-bell" viewBox="0 0 52 52" fill="none"><path d="M26 6C26 6 14 12 14 26V36H38V26C38 12 26 6 26 6Z" fill="#E8998A" opacity=".75"/><rect x="22" y="36" width="8" height="4" rx="1" fill="#F0C466"/><circle cx="26" cy="42" r="3" fill="#F0C466"/><path d="M12 36H40" stroke="#F0C466" stroke-width="1.5"/></svg>
+      <svg class="hero-bell" viewBox="0 0 52 52" fill="none"><path d="M26 6C26 6 14 12 14 26V36H38V26C38 12 26 6 26 6Z" fill="#C4716A" opacity=".8"/><rect x="22" y="36" width="8" height="4" rx="1" fill="#D4A843"/><circle cx="26" cy="42" r="3" fill="#D4A843"/><path d="M12 36H40" stroke="#D4A843" stroke-width="1.5"/></svg>
+    </div>
+    <div class="h-eyebrow">The Wedding Chapter &nbsp;·&nbsp; chapters.life</div>
+    <h1 class="h-title">The <em>Wedding</em><br>Chapter</h1>
+    <div class="h-couple" id="heroCoupleNames">Katie &amp; Chris Ball</div>
+    <p class="h-sub" id="heroSubLine">Planning your perfect day &nbsp;·&nbsp; chapters.life</p>
+
+    <!-- Life Arc -->
+    <div class="arc-wrap">
+      <svg viewBox="0 0 820 80" preserveAspectRatio="none">
+        <path d="M 40,65 C 200,65 250,15 410,12 C 570,9 620,40 780,25" fill="none" stroke="rgba(212,168,67,.18)" stroke-width="1.5" stroke-dasharray="4 8"/>
+        <path d="M 40,65 C 200,65 250,15 410,12 C 570,9 620,40 780,25" fill="none" stroke="rgba(212,168,67,.08)" stroke-width="1" filter="blur(2px)"/>
+      </svg>
+      <div class="arc-nodes">
+        <div class="arc-node" style="left:5%;top:80%"><div class="arc-dot done"></div><div class="arc-lbl">College</div></div>
+        <div class="arc-node" style="left:25%;top:35%"><div class="arc-dot done"></div><div class="arc-lbl">Career</div></div>
+        <div class="arc-node" style="left:44%;top:17%"><div class="arc-dot done"></div><div class="arc-lbl">Engaged</div></div>
+        <div class="arc-node" style="left:62%;top:28%"><div class="arc-dot now"></div><div class="arc-lbl now">Wedding</div></div>
+        <div class="arc-node" style="left:80%;top:38%"><div class="arc-dot"></div><div class="arc-lbl">Family</div></div>
+        <div class="arc-node" style="left:95%;top:32%"><div class="arc-dot"></div><div class="arc-lbl">Wealth</div></div>
+      </div>
+    </div>
+
+    <!-- Setup wizard (shown until user fills in basics) -->
+    <div class="setup-wrap" id="setupWizard">
+      <div class="setup-eyebrow">⚡ Get Started — Set Up Your Chapter</div>
+      <div class="setup-title">Welcome, <em>Chris &amp; Katie.</em></div>
+      <div class="setup-grid">
+        <div class="setup-field"><label>Partner 1 Name</label><input type="text" id="setupP1" value="Chris" placeholder="e.g. Chris"></div>
+        <div class="setup-field"><label>Partner 2 Name</label><input type="text" id="setupP2" value="Katie" placeholder="e.g. Katie"></div>
+        <div class="setup-field"><label>Wedding Date</label><input type="date" id="setupDate"></div>
+        <div class="setup-field"><label>Venue / City</label><input type="text" id="setupVenue" placeholder="e.g. The Rosewood, Newport RI"></div>
+        <div class="setup-field"><label>Total Budget</label><input type="text" id="setupBudget" placeholder="e.g. $75,000"></div>
+        <div class="setup-field"><label>Planner Name (if any)</label><input type="text" id="setupPlanner" placeholder="e.g. Sarah at Luxe Events"></div>
+      </div>
+      <button class="setup-btn" onclick="applySetup()">✦ Activate My Chapter →</button>
+    </div>
+
+    <div class="stats-strip">
+      <div class="sc"><span class="sc-val" id="heroD" style="color:var(--rose2)">—</span><div class="sc-lbl">Days Out</div></div>
+      <div class="sc"><span class="sc-val" id="heroBudgetStat" style="color:var(--gold)">—</span><div class="sc-lbl">Budget</div></div>
+      <div class="sc"><span class="sc-val" id="heroVendorCount" style="color:var(--grn)">0</span><div class="sc-lbl">Vendors</div></div>
+      <div class="sc"><span class="sc-val" id="heroPct" style="color:var(--rose2)">0%</span><div class="sc-lbl">Checklist</div></div>
+      <div class="sc"><span class="sc-val" id="heroSess" style="color:var(--gold)">0</span><div class="sc-lbl">Sessions</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TABS BAR -->
+  <div class="tabs-bar">
+    <button class="tb on" onclick="showTab('overview',this)">Overview</button>
+    <button class="tb" onclick="showTab('checklist',this)">Checklist</button>
+    <button class="tb" onclick="showTab('budget',this)">Budget</button>
+    <button class="tb" onclick="showTab('vendors',this)">Vendors</button>
+    <button class="tb" onclick="showTab('party',this)">Wedding Party</button>
+    <button class="tb" onclick="showTab('dayof',this)">Day-Of</button>
+    <button class="tb" onclick="showTab('music',this)">Music</button>
+    <button class="tb" onclick="showTab('logistics',this)">Logistics</button>
+    <button class="tb" onclick="showTab('openitems',this)">Open Items</button>
+    <button class="tb" onclick="showTab('sessions',this)">💬 Sessions</button>
+  </div>
+
+<!-- ════ OVERVIEW ════ -->
+<div class="pg on" id="pg-overview">
+
+  <!-- ════ CONGRATS CARD — Tom & Lydia ════ -->
+  <div style="background:linear-gradient(135deg,rgba(196,113,106,.09),rgba(212,168,67,.04));border:1px solid rgba(196,113,106,.28);border-left:4px solid var(--rose);padding:24px 28px;margin-bottom:16px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--rose2)">🌿 &nbsp; A Note from Tom &amp; Lydia</div></div><div style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:600;color:var(--t1);margin-bottom:12px;line-height:1.35">Congratulations, Chris &amp; Katie.</div><div style="font-family:'Instrument Serif',Georgia,serif;font-size:14px;color:var(--t2);line-height:1.85;max-width:700px">We are so incredibly happy for you both. Getting engaged is one of those moments you carry with you forever — and watching two people you love step into that chapter together is genuinely one of the best feelings.<br><br>Wishing you nothing but joy, laughter, and the most perfect day. You two deserve every single bit of it.<br><br><span style="color:var(--rose2);font-style:italic">With so much love — Tom &amp; Lydia &nbsp;🥂</span><br><br><div style="display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06);margin-top:4px"><span class="harvey-wrap"><span class="smiley"></span><span class="harvey-tip">😊 Harvey Ball · Inventor of the Smiley Face · 1963</span></span><span style="font-family:var(--mono);font-size:9px;color:var(--t3);letter-spacing:.5px;line-height:1.7">This one's for your grandfather, Chris. &nbsp;<span style="color:#FFD700">Harvey Ball</span> — Worcester, MA, 1963.<br><span style="color:var(--t4)">The man who gave the world its smile. We're honored to include his icon in your chapter.</span></span></div>
+    </div>
+  </div>
+
+  <!-- ════ WELCOME CARD — chapters.life ════ -->
+  <div style="background:linear-gradient(135deg,rgba(212,168,67,.07),rgba(196,113,106,.04));border:1px solid rgba(212,168,67,.22);border-left:4px solid var(--gold);padding:22px 26px;margin-bottom:22px">
+    <div style="font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px">✦ &nbsp; Welcome to chapters.life &nbsp; · &nbsp; Beta Member #001</div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:17px;font-weight:600;color:var(--t1);margin-bottom:10px;line-height:1.4">Your Wedding Chapter is ready.</div>
+    <div style="font-family:'Instrument Serif',Georgia,serif;font-size:13.5px;color:var(--t2);line-height:1.8;max-width:680px">
+      You're the very first people outside of development to use this. I built it because planning the most important day of your life shouldn't live in a spreadsheet. This is an early version — but the core is real and it's yours.<br><br>
+      <span style="color:var(--t1)">Fill in your details in the setup box above, then work through each tab at your own pace.</span> The Sessions feature — the last tab — is the one I'm most excited about. Try it with a real conversation you've already had.<br><br>
+      <span style="color:var(--gold2);font-style:italic">Let's plan a great wedding. — Tom</span>
+    </div>
+  </div>
+
+  <div class="cd-bar">
+    <div class="cd-l"><div class="cd-lbl">Countdown to "I Do"</div><div class="cd-main"><span id="cdMain">—</span> days</div></div>
+    <div class="cd-units">
+      <div class="cd-unit"><span class="cd-val" id="cdD">—</span><div class="cd-key">Days</div></div>
+      <div class="cd-unit"><span class="cd-val" id="cdH">—</span><div class="cd-key">Hours</div></div>
+      <div class="cd-unit"><span class="cd-val" id="cdM">—</span><div class="cd-key">Mins</div></div>
+    </div>
+    <div class="cd-r"><div class="cd-venue" id="cdVenue">Your Venue</div><div class="cd-sub" id="cdSub">Set your wedding date above to activate the countdown</div></div>
+  </div>
+
+  <div class="krow">
+    <div class="kpi"><div class="kl">Total Budget</div><div class="kv g" id="ovBudget">—</div><div class="ks">Enter above</div></div>
+    <div class="kpi"><div class="kl">Committed</div><div class="kv r" id="ovCommitted">$0</div><div class="ks">Across all vendors</div></div>
+    <div class="kpi"><div class="kl">Paid to Date</div><div class="kv grn">—</div><div class="ks">Update in Budget tab</div></div>
+    <div class="kpi"><div class="kl">Balance Due</div><div class="kv o">—</div><div class="ks">Track in Budget tab</div></div>
+    <div class="kpi"><div class="kl">Vendors</div><div class="kv grn" id="ovVendors">0</div><div class="ks">Add in Vendors tab</div></div>
+    <div class="kpi"><div class="kl">Planner</div><div class="kv g" id="ovPlanner" style="font-size:13px">—</div><div class="ks">Your coordinator</div></div>
+  </div>
+
+  <div class="g2">
+    <div>
+      <div class="card">
+        <div class="ch">Your Story <em>C-01</em></div>
+        <div class="story-pull">Every great love story deserves <em>its own chapter.</em></div>
+        <textarea class="editable" rows="4" placeholder="This is your space — add how you two met, when you got engaged, what makes your relationship uniquely yours." style="margin-bottom:14px"></textarea>
+        <div class="story-dates" id="storyDates">
+          <div class="sdd"><div class="sdd-d">—</div><div class="sdd-e">Met</div></div>
+          <div class="sdd"><div class="sdd-d">—</div><div class="sdd-e">Official</div></div>
+          <div class="sdd"><div class="sdd-d">—</div><div class="sdd-e">Engaged</div></div>
+          <div class="sdd"><div class="sdd-d" style="color:var(--gold2)">—</div><div class="sdd-e" style="color:var(--t1)">Wedding 🌿</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ch">Wedding Weekend Timeline</div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-dot key"></div><div class="tl-time">Night Before</div><div class="tl-title">Welcome / Rehearsal Dinner</div><div class="tl-desc">Add your rehearsal dinner details here</div></div>
+          <div class="tl-item"><div class="tl-dot now"></div><div class="tl-time now">WEDDING DAY</div><div class="tl-title" style="color:var(--rose2);font-size:16px" id="tlVenue">Your Venue</div><div class="tl-desc">Ceremony · Cocktail Hour · Reception · After Party</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-time">Day After</div><div class="tl-title">Morning After / Farewell Brunch</div><div class="tl-desc">Details TBD</div></div>
+          <div class="tl-item" style="margin-bottom:0"><div class="tl-dot key"></div><div class="tl-time">Honeymoon</div><div class="tl-title">Honeymoon ✈</div><div class="tl-desc">Destination TBD</div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="alert gold" style="margin-bottom:16px">
+        <div class="alert-lbl">⚡ Getting Started — First Steps</div>
+        <p><strong>Hi Chris &amp; Katie</strong> — welcome to your Wedding Chapter. You're chapters.life Beta Member #001.<br><br>Start by confirming your details in the setup box above, then work through each tab at your own pace. The Sessions feature (last tab) is the most powerful part — try it with a real conversation.</p>
+      </div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="ch">Budget Snapshot</div>
+        <div style="margin-bottom:13px">
+          <div class="pb-lbls"><span>Budget Entered</span><span style="color:var(--gold)" id="budgSnapTotal">—</span></div>
+          <div class="pb-wrap" style="height:7px;margin:4px 0"><div class="pb-fill pb-gold" style="width:0%" id="budgSnapBar"></div></div>
+        </div>
+        <div style="font-family:var(--mono);font-size:9.5px;color:var(--t3);line-height:2.3;border-top:1px solid var(--border);padding-top:10px">
+          <div style="display:flex;justify-content:space-between"><span>Add vendors + amounts</span><span style="color:var(--t4)">→ Budget tab</span></div>
+          <div style="display:flex;justify-content:space-between"><span>Track payments</span><span style="color:var(--t4)">→ Budget tab</span></div>
+        </div>
+      </div>
+      <div class="alert rose">
+        <div class="alert-lbl">💬 About The Sessions Feature</div>
+        <p>The <strong>Sessions tab</strong> lets you paste any conversation transcript — with your partner, planner, or vendor — and Claude will extract structured notes, decisions, and action items automatically.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ CHECKLIST ════ -->
+<div class="pg" id="pg-checklist">
+  <div class="krow" style="margin-bottom:20px">
+    <div class="kpi"><div class="kl">Total Items</div><div class="kv g" id="clTotal">—</div></div>
+    <div class="kpi"><div class="kl">Completed</div><div class="kv grn" id="clDone">—</div></div>
+    <div class="kpi"><div class="kl">Remaining</div><div class="kv o" id="clLeft">—</div></div>
+    <div class="kpi"><div class="kl">Progress</div><div class="kv r" id="clPct">—</div><div class="ks"><div class="pb-wrap" style="width:80px;margin-top:5px"><div class="pb-fill pb-rose" id="clBar" style="width:0%"></div></div></div></div>
+  </div>
+
+  <div class="alert gold"><div class="alert-lbl">📋 How to Use This Checklist</div><p>Check off items as you complete them — progress is saved automatically. Edit any task text by clicking on it. Adjust the timing badges to match your actual deadlines.</p></div>
+
+  <div class="card"><div class="ch">12+ Months Out <em>Foundation</em></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Set your total wedding budget</div><div class="cl-meta"><span class="bdg red">First</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Research and book your venue</div><div class="cl-meta"><span class="bdg red">Critical</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Set your wedding date</div><div class="cl-meta"><span class="bdg red">Critical</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Hire a wedding planner (optional)</div><div class="cl-meta"><span class="bdg org">Early</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Create rough guest list</div><div class="cl-meta"><span class="bdg org">Early</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book photographer</div><div class="cl-meta"><span class="bdg org">Book early</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book videographer</div><div class="cl-meta"><span class="bdg org">Book early</span></div></div>
+  </div>
+
+  <div class="card"><div class="ch">9–12 Months Out</div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Send save-the-dates</div><div class="cl-meta"><span class="bdg gold">9 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book caterer (if not venue-provided)</div><div class="cl-meta"><span class="bdg gold">9 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book florist</div><div class="cl-meta"><span class="bdg gold">9 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book DJ or band</div><div class="cl-meta"><span class="bdg gold">9 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Shop for wedding dress / attire</div><div class="cl-meta"><span class="bdg gold">9 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Finalize wedding party</div><div class="cl-meta"><span class="bdg gold">9 mo</span></div></div>
+  </div>
+
+  <div class="card"><div class="ch">6–9 Months Out</div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book hair & make-up</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book transportation</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Plan honeymoon — book flights & hotel</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Create wedding registry</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Schedule cake tasting</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book officiant</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Order invitations (allow design + print time)</div><div class="cl-meta"><span class="bdg dim">6 mo</span></div></div>
+  </div>
+
+  <div class="card"><div class="ch">3–6 Months Out</div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Mail invitations (8–10 weeks before wedding)</div><div class="cl-meta"><span class="bdg org">3–4 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Finalize floral design with florist</div><div class="cl-meta"><span class="bdg dim">4 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Schedule dress fittings</div><div class="cl-meta"><span class="bdg dim">4 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Order wedding cake</div><div class="cl-meta"><span class="bdg dim">4 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Book hotel room blocks for guests</div><div class="cl-meta"><span class="bdg org">ASAP</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Plan rehearsal dinner</div><div class="cl-meta"><span class="bdg dim">4 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Begin writing vows</div><div class="cl-meta"><span class="bdg dim">3 mo</span></div></div>
+  </div>
+
+  <div class="card"><div class="ch">1–3 Months Out <em>Crunch Time</em></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Finalize song choices with DJ / band</div><div class="cl-meta"><span class="bdg org">6 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Submit final guest count to venue / caterer</div><div class="cl-meta"><span class="bdg org">4 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Get marriage license (check state requirements)</div><div class="cl-meta"><span class="bdg org">4–6 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Create seating chart as RSVPs finalize</div><div class="cl-meta"><span class="bdg dim">4 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Finalize day-of timeline with planner / venue</div><div class="cl-meta"><span class="bdg dim">3 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Prepare vendor gratuity envelopes</div><div class="cl-meta"><span class="bdg dim">2 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Final site walkthrough with vendor team</div><div class="cl-meta"><span class="bdg dim">2 wk</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Break in your wedding shoes</div><div class="cl-meta"><span class="bdg dim">1 mo</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Pick up attire — all final fittings done</div><div class="cl-meta"><span class="bdg org">1 wk</span></div></div>
+  </div>
+
+  <div class="card"><div class="ch">Wedding Week</div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Deliver items to venue (decor, favors, etc.)</div><div class="cl-meta"><span class="bdg rose">Wed–Thu</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Rehearsal & dinner</div><div class="cl-meta"><span class="bdg rose">Fri</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Final vendor confirmations</div><div class="cl-meta"><span class="bdg rose">Fri</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt">Rest. Breathe. Be present.</div><div class="cl-meta"><span class="bdg grn">Important</span></div></div>
+    <div class="cl-item"><div class="cb" onclick="ck(this)"></div><div class="cl-txt" style="font-family:var(--serif);font-style:italic;font-size:15px;color:var(--rose2)">GET MARRIED 🌿</div><div class="cl-meta"><span class="bdg rose">Today</span></div></div>
+  </div>
+</div>
+
+<!-- ════ BUDGET ════ -->
+<div class="pg" id="pg-budget">
+  <div class="krow">
+    <div class="kpi"><div class="kl">Total Budget</div><div class="kv g" id="budgTotal">—</div><div class="ks">Set in setup above</div></div>
+    <div class="kpi"><div class="kl">Committed</div><div class="kv r" id="budgCommitted">$0</div><div class="ks">Sum of vendor contracts</div></div>
+    <div class="kpi"><div class="kl">Paid to Date</div><div class="kv grn" id="budgPaid">$0</div><div class="ks">Out the door</div></div>
+    <div class="kpi"><div class="kl">Balance Due</div><div class="kv o" id="budgBalance">$0</div><div class="ks">Still owed</div></div>
+    <div class="kpi"><div class="kl">Buffer</div><div class="kv d" id="budgBuffer">—</div><div class="ks">Committed vs. budget</div></div>
+  </div>
+
+  <div class="alert gold"><div class="alert-lbl">💡 How to Use the Budget Tab</div><p>This is a planning workbook — use the <strong>Allocation by Category</strong> section as a reference for typical wedding budget splits. Add your actual vendor contracts in the <strong>Vendors tab</strong> to track committed spend. A full editable budget tracker is a Chapters feature coming in the full product.</p></div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="ch">Typical Allocation by Category <em>Reference</em></div>
+      <div class="bb-row"><div class="bb-cat">Venue & Catering</div><div class="bb-track"><div class="bb-fill" style="width:40%;background:var(--rose)"></div></div><div class="bb-amt dc">~40%</div><div class="bb-pct dc">40%</div></div>
+      <div class="bb-row"><div class="bb-cat">Photography</div><div class="bb-track"><div class="bb-fill" style="width:10%;background:var(--rose2)"></div></div><div class="bb-amt dc">~10%</div><div class="bb-pct dc">10%</div></div>
+      <div class="bb-row"><div class="bb-cat">Florals</div><div class="bb-track"><div class="bb-fill" style="width:8%;background:var(--grn)"></div></div><div class="bb-amt dc">~8%</div><div class="bb-pct dc">8%</div></div>
+      <div class="bb-row"><div class="bb-cat">Entertainment (DJ / Band)</div><div class="bb-track"><div class="bb-fill" style="width:7%;background:#4ABFBF"></div></div><div class="bb-amt dc">~7%</div><div class="bb-pct dc">7%</div></div>
+      <div class="bb-row"><div class="bb-cat">Videography</div><div class="bb-track"><div class="bb-fill" style="width:5%;background:#5B9AF8"></div></div><div class="bb-amt dc">~5%</div><div class="bb-pct dc">5%</div></div>
+      <div class="bb-row"><div class="bb-cat">Wedding Planner</div><div class="bb-track"><div class="bb-fill" style="width:5%;background:var(--gold)"></div></div><div class="bb-amt dc">~5%</div><div class="bb-pct dc">5%</div></div>
+      <div class="bb-row"><div class="bb-cat">Attire (dress, suits)</div><div class="bb-track"><div class="bb-fill" style="width:5%;background:#A87FD4"></div></div><div class="bb-amt dc">~5%</div><div class="bb-pct dc">5%</div></div>
+      <div class="bb-row"><div class="bb-cat">Hair & Make-Up</div><div class="bb-track"><div class="bb-fill" style="width:3%;background:var(--rose3)"></div></div><div class="bb-amt dc">~3%</div><div class="bb-pct dc">3%</div></div>
+      <div class="bb-row"><div class="bb-cat">Invitations & Stationery</div><div class="bb-track"><div class="bb-fill" style="width:2%;background:var(--org)"></div></div><div class="bb-amt dc">~2%</div><div class="bb-pct dc">2%</div></div>
+      <div class="bb-row"><div class="bb-cat">Transportation</div><div class="bb-track"><div class="bb-fill" style="width:2%;background:var(--t3)"></div></div><div class="bb-amt dc">~2%</div><div class="bb-pct dc">2%</div></div>
+      <div class="bb-row"><div class="bb-cat">Honeymoon + Other</div><div class="bb-track"><div class="bb-fill" style="width:13%;background:var(--gold3)"></div></div><div class="bb-amt dc">~13%</div><div class="bb-pct dc">13%</div></div>
+    </div>
+    <div class="card">
+      <div class="ch">Payment Schedule Notes</div>
+      <textarea class="editable" rows="6" placeholder="Track your payment schedule here. Example:&#10;&#10;Venue deposit — $5,000 due MM/DD&#10;Photographer deposit — $2,000 due MM/DD&#10;Florist deposit — due MM/DD&#10;..."></textarea>
+      <div class="hr"></div>
+      <div class="alert rose" style="margin-bottom:0"><div class="alert-lbl">📌 Tip — Deposits vs. Finals</div><p>Most vendors require a 25–50% deposit to book, with the balance due 2–4 weeks before the wedding. Track every due date in the checklist to avoid missed payments.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ch">Notes & Custom Budget Items</div>
+    <textarea class="editable" rows="6" placeholder="Add any custom line items, notes, or running totals here...&#10;&#10;e.g. Welcome bags — $800&#10;Rehearsal dinner (parents covering) — $5,000&#10;Tips & gratuities — $1,500&#10;Extras buffer — $2,000"></textarea>
+  </div>
+</div>
+
+<!-- ════ VENDORS ════ -->
+<div class="pg" id="pg-vendors">
+  <div class="alert gold"><div class="alert-lbl">📋 Vendor Tracker — Click any card to edit</div><p>Click a vendor card to fill in the name, contact, amount, and payment status. All changes save automatically. Use the <strong>+ Add Vendor</strong> button to add extras.</p></div>
+  <div class="vg" id="vendorGrid"></div>
+  <div class="card" style="margin-top:16px">
+    <div class="ch">Vendor Notes</div>
+    <textarea class="editable" id="vendorNotes" rows="5" placeholder="Add any vendor-related notes, pending decisions, or follow-ups here...&#10;&#10;e.g. Waiting on contract from florist · Need to confirm cocktail hour menu" oninput="saveExtras()"></textarea>
+  </div>
+</div>
+
+<!-- ════ WEDDING PARTY ════ -->
+<div class="pg" id="pg-party">
+  <div class="alert gold"><div class="alert-lbl">👥 Wedding Party — Click any card to edit</div><p>Click on any name card to fill in the person's name, role, phone, and email. All changes save automatically.</p></div>
+  <div class="g2" style="margin-bottom:16px">
+    <div class="card" style="margin:0">
+      <div class="ch">Officiants</div>
+      <div id="officiantGrid" style="display:flex;flex-direction:column;gap:10px;margin-top:4px"></div>
+      <div class="chip" style="margin-top:11px">Confirm license to wed — check your state requirements</div>
+    </div>
+    <div class="card" style="margin:0">
+      <div class="ch">Registry & Stats</div>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--t2);line-height:2.2;margin-bottom:10px">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:4px 0"><span style="color:var(--t3)">Registry URL</span><input id="registryUrl" class="editable" style="width:55%;font-size:10px;padding:2px 6px" placeholder="zola.com/..." oninput="saveExtras()"></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:4px 0"><span style="color:var(--t3)"># Groomsmen</span><input id="statGroom" class="editable" style="width:55%;font-size:10px;padding:2px 6px" placeholder="e.g. 4" oninput="saveExtras()"></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="color:var(--t3)"># Bridesmaids</span><input id="statBride" class="editable" style="width:55%;font-size:10px;padding:2px 6px" placeholder="e.g. 4" oninput="saveExtras()"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card"><div class="ch" style="margin-bottom:10px">Chris's Side — Groomsmen / Attendants</div><div id="groomsmenGrid" class="pg2"></div></div>
+  <div class="card"><div class="ch" style="margin-bottom:10px">Katie's Side — Bridesmaids / Attendants</div><div id="bridesmaidsGrid" class="pg2"></div></div>
+  <div class="card"><div class="ch" style="margin-bottom:10px">Key Family & VIPs</div><div id="vipGrid" class="pg2"></div></div>
+</div>
+
+<!-- ════ DAY-OF ════ -->
+<div class="pg" id="pg-dayof">
+  <div class="alert rose"><div class="alert-lbl">🗓 Day-Of Timeline — Click any cell to edit</div><p>Click on any time, event, or notes cell to edit it directly. Add rows with the button at the bottom. Everything saves automatically.</p></div>
+  <div class="card">
+    <div class="ch">Full Hour-by-Hour — Wedding Day <em style="color:var(--t3);font-size:8px">click any cell to edit</em></div>
+    <div class="tw"><table id="dayofTable">
+      <thead><tr><th style="width:90px">Time</th><th>Event</th><th>Notes</th><th style="width:36px"></th></tr></thead>
+      <tbody id="dayofBody"></tbody>
+    </table></div>
+    <button onclick="addDayofRow()" style="margin-top:12px;font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--t3);background:none;border:1px solid var(--border2);padding:7px 16px;cursor:pointer;transition:all .15s" onmouseover="this.style.borderColor='rgba(212,168,67,.4)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--t3)'">+ Add Row</button>
+  </div>
+  <div class="card">
+    <div class="ch">Day-Of Notes</div>
+    <textarea class="editable" id="dayofNotes" rows="4" placeholder="Vendor load-in times, parking details, bridal suite location, emergency contacts..." oninput="saveExtras()"></textarea>
+  </div>
+</div>
+
+<!-- ════ MUSIC ════ -->
+<div class="pg" id="pg-music">
+  <div class="alert gold"><div class="alert-lbl">🎵 Music Planner — Click song fields to fill in</div><p>Click the song field next to each moment to type in your selection. Status updates automatically. Everything saves as you type.</p></div>
+  <div class="g2">
+    <div class="card">
+      <div class="ch">Key Song Tracker</div>
+      <div id="songTracker"></div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="ch">DJ / Band Details</div>
+        <textarea class="editable" id="djDetails" rows="5" placeholder="DJ / Band name:&#10;Phone:&#10;Email:&#10;&#10;Final song choices due: [date]" oninput="saveExtras()"></textarea>
+      </div>
+      <div class="card">
+        <div class="ch">Dance Lessons (optional)</div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px" id="danceLessons"></div>
+        <div class="chip" style="margin-top:10px">Pick your first dance song before your first lesson</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch">Must-Play List</div>
+    <textarea class="editable" id="mustPlay" rows="5" placeholder="Songs you definitely want played:&#10;&#10;1. &#10;2. &#10;3. ..." oninput="saveExtras()"></textarea>
+  </div>
+  <div class="card">
+    <div class="ch">Do-Not-Play List</div>
+    <textarea class="editable" id="doNotPlay" rows="4" placeholder="Songs or genres to avoid:&#10;&#10;1. &#10;2. &#10;3. ..." oninput="saveExtras()"></textarea>
+  </div>
+</div>
+
+<!-- ════ LOGISTICS ════ -->
+<div class="pg" id="pg-logistics">
+  <div class="g2">
+    <div>
+      <div class="card">
+        <div class="ch">Venue Room / Accommodation Assignments</div>
+        <div class="rg" style="grid-template-columns:1fr;gap:8px;margin-top:0">
+          <div class="rm vip"><div class="rm-type">Bridal Suite / Getting Ready</div><div class="rm-who">Couple</div><div class="rm-note" style="color:var(--rose2)">Bride & Groom 🌿</div></div>
+          <div class="rm"><div class="rm-type">Room / Cottage</div><div class="rm-who">Family Group 1</div><div class="rm-note">Add names</div></div>
+          <div class="rm"><div class="rm-type">Room / Cottage</div><div class="rm-who">Family Group 2</div><div class="rm-note">Add names</div></div>
+          <div class="rm"><div class="rm-type">Room / Cottage</div><div class="rm-who">Family Group 3</div><div class="rm-note">Add names</div></div>
+          <div class="rm" style="border-color:rgba(196,80,80,.2)"><div class="rm-type">To Assign</div><div class="rm-who" style="color:var(--t3)">TBD</div><div class="rm-note" style="color:var(--red)">Unassigned</div></div>
+        </div>
+        <div class="chip" style="margin-top:11px">⚠ Book guest hotel blocks early — popular venues fill fast</div>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:16px">
+        <div class="ch">Quick Contact Sheet</div>
+        <div style="font-family:var(--mono);font-size:9.5px;color:var(--t2);line-height:2.4">
+          <div id="quickContactList" style="font-family:var(--mono);font-size:9.5px;color:var(--t2);line-height:1"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ch">Open Decisions — Shared Choices</div>
+        <div style="font-family:var(--mono);font-size:9.5px;color:var(--t3);line-height:2.3">
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Welcome bags — doing them or not?</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Restroom baskets / amenity kits</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Ceremony programs — order or DIY?</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Escort cards / seating display</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Table numbers — style?</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Menus printed at each place?</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Vow books</div>
+          <div style="padding:3px 0;border-bottom:1px solid var(--border)">? Guest book / alternative</div>
+          <div style="padding:3px 0">? Day-of F&B for getting-ready crew</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ch">Logistics Notes</div>
+    <textarea class="editable" rows="4" placeholder="Add transportation routes, parking info, hotel block details, directions for guests, vendor load-in times, etc..."></textarea>
+  </div>
+</div>
+
+<!-- ════ OPEN ITEMS ════ -->
+<div class="pg" id="pg-openitems">
+  <div class="krow" style="margin-bottom:18px">
+    <div class="kpi"><div class="kl">Critical</div><div class="kv red" id="oiCrit">—</div><div class="ks">Immediate action</div></div>
+    <div class="kpi"><div class="kl">High Priority</div><div class="kv o" id="oiHigh">—</div><div class="ks">This month</div></div>
+    <div class="kpi"><div class="kl">Medium</div><div class="kv g" id="oiMed">—</div><div class="ks">By summer</div></div>
+  </div>
+  <div class="alert rose"><div class="alert-lbl">📌 Open Items Tracker</div><p>Use this section to surface your most pressing decisions. The items below are common wedding open items — edit them to match your actual situation. Critical items are things that will block progress or cost you money if delayed.</p></div>
+  <div class="oi-grid">
+    <div class="oi crit"><div class="oi-rank">Critical · Venue</div><div class="oi-title">Book Venue</div><div class="oi-note">Top-tier venues in popular seasons book 12–18 months out. If not booked, this is your #1 priority.</div></div>
+    <div class="oi crit"><div class="oi-rank">Critical · Payments</div><div class="oi-title">Track Next Deposit Due</div><div class="oi-note">Add your next vendor payment deadline here so it doesn't slip.</div></div>
+    <div class="oi crit"><div class="oi-rank">Critical · Admin</div><div class="oi-title">Send Save-the-Dates</div><div class="oi-note">Should go out 9–12 months before the wedding. Popular destination or holiday weekends need even more lead time.</div></div>
+    <div class="oi crit"><div class="oi-rank">Critical · Hotels</div><div class="oi-title">Book Guest Hotel Blocks</div><div class="oi-note">Reach out to nearby hotels to hold a room block. Do this early — rates and availability change fast.</div></div>
+    <div class="oi high"><div class="oi-rank">High · Music</div><div class="oi-title">Choose First Dance Song</div><div class="oi-note">You'll need this before your first dance lesson and before the DJ finalizes their set. Don't leave it to the last month.</div></div>
+    <div class="oi high"><div class="oi-rank">High · Ceremony</div><div class="oi-title">Write Vows</div><div class="oi-note">Start early — aim for a draft at least 2 months out. Share with officiant at least 3–4 weeks before.</div></div>
+    <div class="oi high"><div class="oi-rank">High · Legal</div><div class="oi-title">Get Marriage License</div><div class="oi-note">Most states require applying 30–90 days before the wedding. Check your state's specific rules and out-of-state requirements.</div></div>
+    <div class="oi high"><div class="oi-rank">High · Food</div><div class="oi-title">Choose Wedding Cake & Baker</div><div class="oi-note">Popular bakers book months in advance. Schedule a tasting, decide on design, and sign a contract.</div></div>
+    <div class="oi med"><div class="oi-rank">Medium · Music</div><div class="oi-title">Finalize All Song Choices</div><div class="oi-note">First dance, father-daughter, mother-son, processional, recessional, cocktail vibe, must-plays, do-not-plays — all needed by your DJ/band deadline.</div></div>
+    <div class="oi med"><div class="oi-rank">Medium · Stationery</div><div class="oi-title">Order Invitations</div><div class="oi-note">Mail 8–10 weeks before the wedding. Allow 4–6 weeks for design + print. Order by ~4.5 months out.</div></div>
+    <div class="oi med"><div class="oi-rank">Medium · Attire</div><div class="oi-title">Finalize All Attire & Fittings</div><div class="oi-note">Dress, suits, bridesmaids — coordinate fittings and pickup timelines with your planner.</div></div>
+    <div class="oi med"><div class="oi-rank">Medium · Gifts</div><div class="oi-title">Wedding Party Gifts</div><div class="oi-note">Plan early if you want personalization — allow 4–6 weeks for custom items.</div></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <div class="ch">Custom Open Items — Add Your Own</div>
+    <textarea class="editable" rows="5" placeholder="Add your specific open items, decisions needed, or things you're waiting on...&#10;&#10;e.g. Waiting on final contract from florist · Need to decide: welcome bags yes/no · Confirm officiant has valid license · Pick honeymoon destination"></textarea>
+  </div>
+</div>
+
+<!-- ════ SESSIONS ════ -->
+<div class="pg" id="pg-sessions">
+  <div class="alert gold" style="margin-bottom:20px">
+    <div class="alert-lbl">💬 Planning Sessions — Your AI Call Log</div>
+    <p>Paste any conversation transcript — voice memo, notes, or raw text — and Claude turns it into structured meeting notes, decisions, and action items. Every session is saved and searchable.</p>
+  </div>
+
+  <div class="sessions-layout">
+    <div class="sess-sidebar">
+      <div class="ss-head">
+        <div class="ss-title">Sessions</div>
+        <div class="ss-sub" id="sessSubLabel">Katie &amp; Chris · Planning Calls</div>
+        <button class="new-session-btn" onclick="openComposer()">＋ New Session</button>
+      </div>
+      <div class="ss-search"><input type="text" placeholder="Search sessions..." id="sessSearch" oninput="filterSessions()"></div>
+      <div class="sess-list" id="sessList"></div>
+      <div class="ss-stats">
+        <div class="sss"><div class="sss-v" id="ssTotal">0</div><div class="sss-l">Sessions</div></div>
+        <div class="sss"><div class="sss-v" id="ssActions">0</div><div class="sss-l">Actions</div></div>
+      </div>
+    </div>
+
+    <div class="sess-main" id="sessMain">
+      <div class="sess-empty" id="sessEmpty">
+        <div class="se-icon">💬</div>
+        <h3 class="se-title">Katie &amp; Chris's <em>planning</em><br>call log.</h3>
+        <p class="se-body">Paste any planning conversation — with each other, your planner, or a vendor — and Claude structures it into clean notes, decisions, and action items. Every session is saved here.</p>
+        <div class="se-cta" onclick="openComposer()">＋ Log First Session</div>
+      </div>
+
+      <div class="composer" id="sessComposer">
+        <span class="comp-eyebrow">New Session</span>
+        <h2 class="comp-title">Log a <em>planning session.</em></h2>
+
+        <div class="f2">
+          <div><label class="fl">Session Date</label><input type="date" class="fi" id="sessDate"></div>
+          <div><label class="fl">Session Type</label>
+            <select class="fi" id="sessType">
+              <option value="weekly-checkin">Weekly Check-In</option>
+              <option value="planning">Wedding Planning</option>
+              <option value="budget">Budget Review</option>
+              <option value="vendor">Vendor Discussion</option>
+              <option value="big-convo">Big Conversation</option>
+              <option value="conflict">Conflict Resolution</option>
+              <option value="honeymoon">Honeymoon Planning</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="fl">Session Title <span style="color:var(--t3)">(optional — Claude will suggest one)</span></label>
+        <input type="text" class="fi" id="sessTitle" placeholder="e.g. Florist final decisions, Budget check-in...">
+
+        <label class="fl">Who Was Present</label>
+        <input type="text" class="fi" id="sessPeople" placeholder="Chris, Katie — or add others..." value="Chris, Katie">
+
+        <label class="fl">Transcript / Notes <span style="color:var(--t3)">— paste raw conversation, voice-to-text, bullet notes, anything</span></label>
+        <textarea class="fi mono-font" id="sessTranscript" placeholder="Paste your transcript here...
+
+Partner 1: So I was thinking we should lock in the florist before the deposit deadline.
+Partner 2: Yeah they have two options for the arch...
+
+Or paste raw bullet notes, voice memo transcripts, exported chat logs — anything works. Claude reads it all."></textarea>
+        <div class="zone-hint">→ Claude extracts structured notes, decisions, and action items automatically</div>
+
+        <button class="proc-btn" id="procBtn" onclick="processSession()">
+          <span id="procBtnTxt">✦ Process with Claude</span>
+        </button>
+
+        <div class="ai-prev" id="aiPrev">
+          <div class="ai-prev-head">
+            <span class="ai-prev-lbl">✦ Claude's Analysis — Review Before Saving</span>
+            <span style="font-family:var(--mono);font-size:8px;color:var(--t3)">Scroll to review</span>
+          </div>
+          <div class="ai-prev-body" id="aiPrevBody"></div>
+        </div>
+
+        <button class="save-btn" id="sessSaveBtn" onclick="saveSessSession()">✓ Save to Sessions</button>
+        <button class="cancel-link" onclick="closeComposer()">← Cancel</button>
+      </div>
+
+      <div class="sess-detail" id="sessDetail"></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-brand">
+        <div style="display:flex;align-items:flex-end;gap:3px">
+          <div style="width:5px;height:14px;background:var(--crimson);border-radius:2px 2px 0 0"></div>
+          <div style="width:6px;height:22px;background:var(--gold);border-radius:2px 2px 0 0"></div>
+          <div style="width:4px;height:11px;background:var(--forest);border-radius:2px 2px 0 0"></div>
+          <div style="width:5px;height:17px;background:var(--rose);border-radius:2px 2px 0 0"></div>
+        </div>
+        chapters
+      </div>
+      <div class="f-sub">The Wedding Chapter · C-01<br>chapters.life · 2026</div>
+    </div>
+    <div><div class="f-ch">This Chapter</div><div class="f-links"><a href="#">Overview</a><a href="#">Checklist</a><a href="#">Budget</a><a href="#">Sessions</a></div></div>
+    <div><div class="f-ch">The Platform</div><div class="f-links"><a href="#">The Prenup Chapter</a><a href="#">The Bach Party Chapter</a><a href="#">chapters.life</a></div></div>
+    <div><div class="f-ch">Beta Feedback</div><div style="font-family:var(--mono);font-size:8.5px;color:var(--t4);line-height:2.2">Chris &amp; Katie — Beta Member #001.<br>Your feedback directly shapes<br>the product. Thank you.</div></div>
+  </div>
+  <div class="f-copy"><span>© 2026 chapters.life · The Wedding Chapter · Katie &amp; Chris</span><span style="display:flex;align-items:center;gap:7px;color:var(--t4)"><span class="harvey-wrap"><span class="smiley smiley-xs"></span><span class="harvey-tip">😊 In honor of Harvey Ball · Inventor of the Smiley Face · Worcester MA · 1963</span></span> <span>In honor of Harvey Ball &nbsp;·&nbsp; Worcester, MA &nbsp;·&nbsp; 1963</span></span></div>
+</footer>
+
+<!-- IP / LEGAL STRIP -->
+<div style="background:#0A090C;border-top:1px solid rgba(255,255,255,.06);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;position:relative;z-index:1">
+  <!-- Brand mark -->
+  <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+    <div style="width:32px;height:32px;border:1px solid rgba(212,168,67,.3);border-radius:3px;display:flex;align-items:center;justify-content:center;background:rgba(212,168,67,.06)">
+      <span style="font-family:var(--display);font-size:13px;font-weight:700;color:var(--gold);letter-spacing:-.5px">Ch</span>
+    </div>
+    <div>
+      <div style="font-family:var(--display);font-size:12px;font-weight:700;color:var(--t1);letter-spacing:-.3px">CHAPTERS™</div>
+      <div style="font-family:var(--mono);font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t4)">A Thomas O'Leary Venture</div>
+    </div>
+  </div>
+  <!-- Legal text -->
+  <div style="flex:1;text-align:center;font-family:var(--mono);font-size:9px;color:var(--t4);line-height:1.9;letter-spacing:.02em">
+    <div style="color:var(--t3);margin-bottom:2px">© 2026 Thomas O'Leary. All rights reserved.</div>
+    <div>All platform concepts, workflows, design systems, and features developed within this custom-built dashboard are the exclusive intellectual property of <span style="color:var(--gold2)">Thomas O'Leary</span> and the <span style="color:var(--rose2)">Chapters™</span> brand. Unauthorized reproduction or use is strictly prohibited.</div>
+  </div>
+  <!-- Confidential badge -->
+  <div style="flex-shrink:0;display:flex;align-items:center;gap:7px;padding:7px 14px;border:1px solid rgba(196,113,106,.4);background:rgba(196,113,106,.06)">
+    <span style="color:var(--rose2);font-size:11px">⚠</span>
+    <span style="font-family:var(--mono);font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose2)">Confidential &amp; Proprietary</span>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ════ STARS ════ */
+(()=>{
+  const c=document.getElementById('stars');
+  for(let i=0;i<100;i++){
+    const s=document.createElement('div');s.className='star';
+    const z=Math.random()*2+.5;
+    s.style.cssText=`width:${z}px;height:${z}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;--op:${.2+Math.random()*.4}`;
+    c.appendChild(s);
+  }
+})();
+
+/* ════ SCROLL PROGRESS ════ */
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement;
+  document.getElementById('progress').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+});
+
+/* ════ SETUP STATE ════ */
+let weddingDate=null;
+let coupleName1='',coupleName2='',venueStr='',budgetStr='';
+
+function applySetup(){
+  coupleName1=document.getElementById('setupP1').value.trim()||'Partner 1';
+  coupleName2=document.getElementById('setupP2').value.trim()||'Partner 2';
+  const dateVal=document.getElementById('setupDate').value;
+  venueStr=document.getElementById('setupVenue').value.trim()||'Your Venue';
+  budgetStr=document.getElementById('setupBudget').value.trim()||'—';
+  const plannerVal=document.getElementById('setupPlanner').value.trim()||'—';
+
+  if(dateVal) weddingDate=new Date(dateVal+'T15:00:00');
+
+  // Update hero
+  document.getElementById('heroCoupleNames').textContent=coupleName2+' & '+coupleName1;
+  if(dateVal){
+    const d=new Date(dateVal+'T12:00:00');
+    const dStr=d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+    document.getElementById('heroSubLine').textContent='Planning for your wedding &nbsp;·&nbsp; '+dStr+' &nbsp;·&nbsp; '+venueStr;
+  }
+  document.getElementById('cdVenue').textContent=venueStr;
+  if(dateVal){
+    const d=new Date(dateVal+'T12:00:00');
+    document.getElementById('cdSub').textContent=d.toLocaleDateString('en-US',{weekday:'long'})+' · '+d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+' · Ceremony TBD';
+  }
+  document.getElementById('ovBudget').textContent=budgetStr;
+  document.getElementById('budgSnapTotal').textContent=budgetStr;
+  document.getElementById('budgTotal').textContent=budgetStr;
+  document.getElementById('heroBudgetStat').textContent=budgetStr;
+  document.getElementById('ovPlanner').textContent=plannerVal;
+  document.getElementById('tlVenue').textContent=venueStr;
+  document.getElementById('sessSubLabel').textContent=coupleName1+' & '+coupleName2+' · Planning Calls';
+
+  // Hide setup wizard
+  document.getElementById('setupWizard').style.display='none';
+
+  countdown();
+  saveSetupState();
+  toast('Setup saved ✓','grn');
+}
+
+/* ════ COUNTDOWN ════ */
+function countdown(){
+  if(!weddingDate)return;
+  const now=new Date(),diff=weddingDate-now;
+  if(diff<0){
+    ['cdMain','cdD','heroD','navDays'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='🎊';});
+    return;
+  }
+  const d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4);
+  ['cdMain','cdD','heroD','navDays'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=d;});
+  const cdH=document.getElementById('cdH');if(cdH)cdH.textContent=h;
+  const cdM=document.getElementById('cdM');if(cdM)cdM.textContent=m;
+}
+countdown();setInterval(countdown,6e4);
+
+/* ════ TABS ════ */
+function showTab(id,btn){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(t=>t.classList.remove('on'));
+  document.getElementById('pg-'+id).classList.add('on');
+  btn.classList.add('on');
+  updateCLStats();
+  window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop-54,behavior:'smooth'});
+}
+
+/* ════ CHECKLIST ════ */
+function ck(el){
+  el.classList.toggle('on');
+  const txt=el.nextElementSibling;
+  if(el.classList.contains('on')){el.textContent='✓';if(txt)txt.classList.add('done');}
+  else{el.textContent='';if(txt)txt.classList.remove('done');}
+  saveState();updateCLStats();
+}
+function updateCLStats(){
+  const all=document.querySelectorAll('.cb'),done=document.querySelectorAll('.cb.on');
+  const total=all.length,completed=done.length,remain=total-completed,pct=total>0?Math.round(completed/total*100):0;
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set('clTotal',total);set('clDone',completed);set('clLeft',remain);set('clPct',pct+'%');
+  set('heroPct',pct+'%');
+  const bar=document.getElementById('clBar');if(bar)bar.style.width=pct+'%';
+}
+
+/* ════ LOCALSTORAGE STATE ════ */
+function saveState(){
+  const cbs={};document.querySelectorAll('.cb').forEach((el,i)=>cbs[i]=el.classList.contains('on'));
+  localStorage.setItem('ch_wed_chris_katie_cbs',JSON.stringify(cbs));
+  localStorage.setItem('ch_wed_chris_katie_sessions',JSON.stringify(sessions));
+}
+
+function saveSetupState(){
+  localStorage.setItem('ch_wed_chris_katie_setup',JSON.stringify({
+    p1:coupleName1,p2:coupleName2,
+    date:document.getElementById('setupDate').value,
+    venue:venueStr,budget:budgetStr,
+    planner:document.getElementById('setupPlanner').value.trim()
+  }));
+}
+
+function loadState(){
+  try{
+    const cbs=JSON.parse(localStorage.getItem('ch_wed_chris_katie_cbs')||'{}');
+    document.querySelectorAll('.cb').forEach((el,i)=>{
+      if(cbs[i]){el.classList.add('on');el.textContent='✓';const t=el.nextElementSibling;if(t)t.classList.add('done');}
+    });
+  }catch(e){}
+  try{
+    const s=JSON.parse(localStorage.getItem('ch_wed_chris_katie_sessions')||'[]');
+    if(Array.isArray(s))sessions=s;
+  }catch(e){}
+  try{
+    const setup=JSON.parse(localStorage.getItem('ch_wed_chris_katie_setup')||'null');
+    if(setup){
+      document.getElementById('setupP1').value=setup.p1||'';
+      document.getElementById('setupP2').value=setup.p2||'';
+      document.getElementById('setupDate').value=setup.date||'';
+      document.getElementById('setupVenue').value=setup.venue||'';
+      document.getElementById('setupBudget').value=setup.budget||'';
+      document.getElementById('setupPlanner').value=setup.planner||'';
+      if(setup.p1||setup.p2||setup.date)applySetup();
+    }
+  }catch(e){}
+  updateCLStats();renderSessionSidebar();updateSessionStats();
+}
+
+/* ════ SESSIONS ════ */
+let sessions=[];
+let currentSessId=null;
+let sessAiResult=null;
+
+function updateSessionStats(){
+  const t=sessions.length;
+  const a=sessions.reduce((s,x)=>s+(x.actionItems||[]).length,0);
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  set('ssTotal',t);set('ssActions',a);set('navSessCount',t);set('heroSess',t);
+}
+
+function renderSessionSidebar(filter=''){
+  const list=document.getElementById('sessList');
+  if(!list)return;
+  const filtered=sessions.filter(s=>!filter||s.title.toLowerCase().includes(filter.toLowerCase())||(s.summary||'').toLowerCase().includes(filter.toLowerCase())).sort((a,b)=>new Date(b.date)-new Date(a.date));
+  if(!filtered.length){
+    list.innerHTML=`<div style="padding:22px 18px;font-family:var(--mono);font-size:9px;color:var(--t3);text-align:center;letter-spacing:1.5px;text-transform:uppercase">${sessions.length?'No matches':'No sessions yet'}</div>`;
+    return;
+  }
+  list.innerHTML=filtered.map(s=>`
+    <div class="si ${currentSessId===s.id?'on':''}" onclick="openSession('${s.id}')">
+      <button class="si-del" onclick="event.stopPropagation();deleteSess('${s.id}')">✕</button>
+      <div class="si-date">${fmtDate(s.date)}</div>
+      <div class="si-title">${esc(s.title)}</div>
+      <div class="si-prev">${esc((s.summary||'').substring(0,75))}${(s.summary||'').length>75?'…':''}</div>
+      <div class="si-tags">
+        <span class="si-tag rose">${typeLabel(s.type)}</span>
+        ${(s.actionItems||[]).length?`<span class="si-tag gold">${s.actionItems.length} actions</span>`:''}
+        ${(s.decisions||[]).length?`<span class="si-tag grn">${s.decisions.length} decisions</span>`:''}
+        ${(s.concerns||[]).length?`<span class="si-tag red">${s.concerns.length} concerns</span>`:''}
+      </div>
+    </div>`).join('');
+}
+
+function filterSessions(){renderSessionSidebar(document.getElementById('sessSearch').value);}
+
+function openComposer(){
+  currentSessId=null;
+  document.getElementById('sessEmpty').style.display='none';
+  document.getElementById('sessDetail').style.display='none';
+  document.getElementById('sessDetail').classList.remove('open');
+  const c=document.getElementById('sessComposer');c.style.display='flex';c.classList.add('open');
+  document.getElementById('sessDate').value=new Date().toISOString().split('T')[0];
+  document.getElementById('sessTitle').value='';
+  document.getElementById('sessPeople').value='';
+  document.getElementById('sessTranscript').value='';
+  document.getElementById('aiPrev').classList.remove('open');
+  document.getElementById('sessSaveBtn').classList.remove('open');
+  const btn=document.getElementById('procBtn');btn.disabled=false;
+  document.getElementById('procBtnTxt').textContent='✦ Process with Claude';
+  sessAiResult=null;
+  renderSessionSidebar();
+}
+
+function closeComposer(){
+  const c=document.getElementById('sessComposer');c.style.display='none';c.classList.remove('open');
+  if(sessions.length){if(currentSessId)openSession(currentSessId);else showEmpty();}
+  else showEmpty();
+}
+
+function showEmpty(){
+  document.getElementById('sessEmpty').style.display='';
+  document.getElementById('sessDetail').style.display='none';
+  document.getElementById('sessDetail').classList.remove('open');
+  document.getElementById('sessComposer').style.display='none';
+  document.getElementById('sessComposer').classList.remove('open');
+}
+
+async function processSession(){
+  const transcript=document.getElementById('sessTranscript').value.trim();
+  if(!transcript){toast('Paste a transcript first','rose');return;}
+  const date=document.getElementById('sessDate').value;
+  const type=document.getElementById('sessType').value;
+  const people=document.getElementById('sessPeople').value;
+  const titleHint=document.getElementById('sessTitle').value;
+  const couple=coupleName1&&coupleName2?`${coupleName1} and ${coupleName2}`:'Chris and Katie';
+
+  const btn=document.getElementById('procBtn');
+  const btnTxt=document.getElementById('procBtnTxt');
+  btn.disabled=true;
+  btnTxt.innerHTML='<span class="ldots"><span></span><span></span><span></span></span>&nbsp; Claude is reading...';
+
+  const prompt=`You are analyzing a wedding planning conversation involving ${couple}.
+
+Extract structured notes. Return ONLY valid JSON — no markdown fences, no preamble, no explanation.
+
+Session info: Date: ${date}, Type: ${type}, People: ${people}, Title hint: "${titleHint||'auto-generate'}"
+
+Transcript:
+"""
+${transcript}
+"""
+
+Return this exact JSON:
+{"title":"Short title 5-8 words","summary":"2-3 sentence summary","mood":{"score":1,"label":"Productive"},"keyTopics":["topic1"],"decisions":[{"category":"cat","item":"what was discussed","outcome":"what was decided","status":"decided"}],"actionItems":[{"text":"action","owner":"person","deadline":"timeframe"}],"highlights":["key moment"],"concerns":["worry or open issue"],"nextSession":"suggested next topic"}`;
+
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:1200,
+        system:'You extract structured notes from conversations and return ONLY valid JSON. No markdown. No backticks. No explanation. Just the JSON object.',
+        messages:[{role:'user',content:prompt}]
+      })
+    });
+
+    if(!res.ok){const err=await res.text();console.error('API error:',res.status,err);throw new Error(`API ${res.status}`);}
+
+    const data=await res.json();
+    let raw=(data.content||[]).find(b=>b.type==='text')?.text||'';
+    raw=raw.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
+    const start=raw.indexOf('{'),end=raw.lastIndexOf('}');
+    if(start===-1||end===-1)throw new Error('No JSON in response');
+    raw=raw.slice(start,end+1);
+
+    sessAiResult=JSON.parse(raw);
+    renderAiPreview(sessAiResult);
+    document.getElementById('aiPrev').classList.add('open');
+    document.getElementById('sessSaveBtn').classList.add('open');
+    btnTxt.textContent='✦ Re-Process';
+    btn.disabled=false;
+    toast('Analysis complete ✓','grn');
+  }catch(e){
+    console.error('Session processing error:',e);
+    btnTxt.textContent='✦ Process with Claude';
+    btn.disabled=false;
+    toast('Error — check console. Transcript may be too long.','rose');
+  }
+}
+
+function renderAiPreview(r){
+  const mc=r.mood?.score>=7?'var(--grn)':r.mood?.score>=4?'var(--gold)':'var(--red)';
+  document.getElementById('aiPrevBody').innerHTML=`
+    <div class="ai-sec"><div class="ai-sec-head">Title & Summary</div>
+      <div style="font-family:var(--serif);font-size:15px;font-weight:600;color:var(--t1);margin-bottom:5px">${esc(r.title||'')}</div>
+      <div style="font-size:12px;color:var(--t2);font-family:var(--body);line-height:1.7">${esc(r.summary||'')}</div>
+    </div>
+    <div class="ai-sec"><div class="ai-sec-head">Mood — ${esc(r.mood?.label||'')} (${r.mood?.score||'?'}/10)</div>
+      <div class="mood-bar-wrap"><div class="mb-track"><div class="mb-fill" style="width:${(r.mood?.score||5)*10}%;background:${mc}"></div></div><div class="mb-lbl">${r.mood?.score||'?'}/10</div></div>
+    </div>
+    ${r.keyTopics?.length?`<div class="ai-sec"><div class="ai-sec-head">Key Topics</div><div style="display:flex;flex-wrap:wrap;gap:6px">${r.keyTopics.map(t=>`<span style="font-family:var(--mono);font-size:9px;padding:3px 8px;border:1px solid var(--border2);color:var(--t2)">${esc(t)}</span>`).join('')}</div></div>`:''}
+    ${r.decisions?.length?`<div class="ai-sec"><div class="ai-sec-head">Decisions (${r.decisions.length})</div>${r.decisions.map(d=>`<div class="ai-line">${esc(d.item)} — <em style="color:var(--gold)">${esc(d.outcome)}</em></div>`).join('')}</div>`:''}
+    ${r.actionItems?.length?`<div class="ai-sec"><div class="ai-sec-head">Action Items (${r.actionItems.length})</div>${r.actionItems.map(a=>`<div class="ai-line">[${esc(a.owner)}] ${esc(a.text)}${a.deadline?` <span style="color:var(--t3)">· ${esc(a.deadline)}</span>`:''}</div>`).join('')}</div>`:''}
+    ${r.highlights?.length?`<div class="ai-sec"><div class="ai-sec-head">Highlights</div>${r.highlights.map(h=>`<div class="ai-line">${esc(h)}</div>`).join('')}</div>`:''}
+    ${r.concerns?.length?`<div class="ai-sec"><div class="ai-sec-head">Concerns / Open</div>${r.concerns.map(c=>`<div class="ai-line" style="color:var(--red)">${esc(c)}</div>`).join('')}</div>`:''}
+    ${r.nextSession?`<div class="ai-sec"><div class="ai-sec-head">Suggested Next Topic</div><div style="font-size:12px;color:var(--gold);font-family:var(--body)">${esc(r.nextSession)}</div></div>`:''}
+  `;
+}
+
+function saveSessSession(){
+  if(!sessAiResult){toast('Process transcript first','rose');return;}
+  const id='sess-'+Date.now();
+  const s={
+    id,date:document.getElementById('sessDate').value,
+    type:document.getElementById('sessType').value,
+    people:document.getElementById('sessPeople').value,
+    rawTranscript:document.getElementById('sessTranscript').value,
+    title:document.getElementById('sessTitle').value||sessAiResult.title,
+    summary:sessAiResult.summary,mood:sessAiResult.mood,
+    keyTopics:sessAiResult.keyTopics||[],
+    decisions:sessAiResult.decisions||[],
+    actionItems:(sessAiResult.actionItems||[]).map(a=>({...a,done:false})),
+    highlights:sessAiResult.highlights||[],
+    concerns:sessAiResult.concerns||[],
+    nextSession:sessAiResult.nextSession||'',
+    createdAt:new Date().toISOString()
+  };
+  sessions.unshift(s);
+  saveState();renderSessionSidebar();updateSessionStats();
+  document.getElementById('sessComposer').style.display='none';
+  document.getElementById('sessComposer').classList.remove('open');
+  openSession(id);
+  toast('Session saved ✓','grn');
+}
+
+function openSession(id){
+  currentSessId=id;
+  const s=sessions.find(x=>x.id===id);
+  if(!s)return;
+  document.getElementById('sessEmpty').style.display='none';
+  document.getElementById('sessComposer').style.display='none';
+  document.getElementById('sessComposer').classList.remove('open');
+  const det=document.getElementById('sessDetail');
+  det.innerHTML=renderDetail(s);
+  det.style.display='flex';det.classList.add('open');
+  renderSessionSidebar(document.getElementById('sessSearch').value);
+}
+
+function renderDetail(s){
+  const mc=(s.mood?.score||5)>=7?'var(--grn)':(s.mood?.score||5)>=4?'var(--gold)':'var(--red)';
+  return `
+    <div class="sd-eyebrow">
+      <button class="sd-back" onclick="goSessBack()">← Sessions</button>
+      <span style="color:var(--border2)">|</span><span>${typeLabel(s.type)}</span>
+      <span style="color:var(--border2)">·</span><span>${fmtDate(s.date)}</span>
+    </div>
+    <h2 class="sd-title">${esc(s.title)}</h2>
+    <div class="sd-meta">
+      <span>👥 <span>${esc(s.people||'')}</span></span>
+      <span>${s.mood?`Mood: <span style="color:${mc}">${esc(s.mood.label)} ${s.mood.score}/10</span>`:''}</span>
+    </div>
+    ${s.mood?`<div class="mood-bar-wrap" style="margin-bottom:14px"><div class="mb-track"><div class="mb-fill" style="width:${(s.mood.score||5)*10}%;background:${mc}"></div></div><div class="mb-lbl">${s.mood.score}/10</div></div>`:''}
+    <div style="margin-bottom:20px"><div class="ns-title">📝 Summary</div>
+      <div style="font-family:var(--body);font-size:14px;color:var(--t2);line-height:1.8;border-left:3px solid var(--rose3);padding-left:15px">${esc(s.summary||'No summary')}</div>
+    </div>
+    ${s.keyTopics?.length?`<div style="margin-bottom:20px"><div class="ns-title">🏷 Key Topics</div><div style="display:flex;gap:8px;flex-wrap:wrap">${s.keyTopics.map(t=>`<span style="font-family:var(--mono);font-size:9px;padding:4px 10px;border:1px solid var(--border2);color:var(--t2)">${esc(t)}</span>`).join('')}</div></div>`:''}
+    ${s.decisions?.length?`<div style="margin-bottom:20px"><div class="ns-title">⚖️ Decisions (${s.decisions.length})</div><div class="dec-grid">${s.decisions.map(d=>`<div class="dc"><div class="dc-cat">${esc(d.category||'Decision')}</div><div class="dc-item">${esc(d.item)}</div><div class="dc-out">${esc(d.outcome)}</div><span class="dc-st ${d.status||'decided'}">${d.status||'decided'}</span></div>`).join('')}</div></div>`:''}
+    ${s.actionItems?.length?`<div style="margin-bottom:20px"><div class="ns-title">✅ Action Items (${s.actionItems.length})</div><div id="acts-${s.id}">${renderActions(s)}</div></div>`:''}
+    ${s.highlights?.length?`<div style="margin-bottom:20px"><div class="ns-title">✨ Highlights</div>${s.highlights.map(h=>`<div class="note-item"><span class="nb g">★</span><span>${esc(h)}</span></div>`).join('')}</div>`:''}
+    ${s.concerns?.length?`<div style="margin-bottom:20px"><div class="ns-title">⚠️ Concerns / Open</div>${s.concerns.map(c=>`<div class="note-item"><span class="nb r">!</span><span>${esc(c)}</span></div>`).join('')}</div>`:''}
+    ${s.nextSession?`<div style="margin-bottom:20px"><div class="ns-title">→ Suggested Next Topic</div><div style="border:1px solid rgba(212,168,67,.2);border-left:3px solid var(--gold3);padding:11px 15px;font-family:var(--body);font-size:13px;color:var(--gold2)">${esc(s.nextSession)}</div></div>`:''}
+    ${s.rawTranscript?`<div style="margin-bottom:20px"><button class="raw-btn" onclick="toggleRaw('raw-${s.id}')">◈ View Raw Transcript</button><div class="raw-box" id="raw-${s.id}">${esc(s.rawTranscript)}</div></div>`:''}
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:flex-end">
+      <button onclick="deleteSess('${s.id}')" style="font-family:var(--mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);cursor:pointer;padding:7px 13px;border:1px solid var(--border);background:none;transition:all .15s" onmouseover="this.style.borderColor='rgba(196,80,80,.4)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--t3)'">✕ Delete Session</button>
+    </div>
+  `;
+}
+
+function renderActions(s){
+  return (s.actionItems||[]).map((a,i)=>`
+    <div class="act-item">
+      <div class="act-cb ${a.done?'on':''}" onclick="toggleAction('${s.id}',${i})">${a.done?'✓':''}</div>
+      <div class="act-txt ${a.done?'done':''}">${esc(a.text)}${a.deadline?`<span style="font-family:var(--mono);font-size:9px;color:var(--t3);margin-left:8px">· ${esc(a.deadline)}</span>`:''}</div>
+      <div class="act-owner">${esc(a.owner||'')}</div>
+    </div>`).join('');
+}
+
+function toggleAction(sessId,index){
+  const s=sessions.find(x=>x.id===sessId);
+  if(!s||!s.actionItems[index])return;
+  s.actionItems[index].done=!s.actionItems[index].done;
+  saveState();updateSessionStats();
+  const c=document.getElementById('acts-'+sessId);
+  if(c)c.innerHTML=renderActions(s);
+}
+
+function deleteSess(id){
+  sessions=sessions.filter(s=>s.id!==id);
+  if(currentSessId===id){currentSessId=null;}
+  saveState();renderSessionSidebar();updateSessionStats();
+  showEmpty();toast('Session deleted','rose');
+}
+
+function goSessBack(){currentSessId=null;showEmpty();renderSessionSidebar();}
+function toggleRaw(id){const el=document.getElementById(id);if(el)el.classList.toggle('open');}
+
+/* ════ UTILS ════ */
+function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function fmtDate(d){if(!d)return'';try{return new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}catch(e){return d;}}
+function typeLabel(t){return{'weekly-checkin':'Weekly Check-In','planning':'Planning','budget':'Budget','vendor':'Vendor','big-convo':'Big Convo','conflict':'Conflict','honeymoon':'Honeymoon','other':'Other'}[t]||t;}
+
+/* ════ TOAST ════ */
+function toast(msg,type='grn'){
+  const el=document.getElementById('toast');
+  el.textContent=msg;el.className='toast '+type;el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),2800);
+}
+
+
+/* ═══════════════════════════════════════════
+   INTERACTIVE DATA ENGINE
+   vendors · party · day-of · music · logistics
+═══════════════════════════════════════════ */
+
+/* ── DEFAULT DATA ── */
+const DEFAULT_VENDORS = [
+  {cat:'Venue & Catering',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Wedding Planner',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Photography',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Videography',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Florist',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'DJ / Entertainment',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Hair & Make-Up',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Transportation',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Rehearsal Dinner',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Officiant',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+  {cat:'Cake / Desserts',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'},
+];
+
+const DEFAULT_PARTY = {
+  officiants:[{role:'Officiant',name:'',phone:'',email:''},{role:'Co-Officiant (if any)',name:'',phone:'',email:''}],
+  groomsmen:[
+    {role:'Best Man',name:'',phone:'',email:'',vip:true},
+    {role:'Groomsman',name:'',phone:'',email:''},
+    {role:'Groomsman',name:'',phone:'',email:''},
+    {role:'Groomsman',name:'',phone:'',email:''},
+  ],
+  bridesmaids:[
+    {role:'Maid of Honor',name:'',phone:'',email:'',vip:true},
+    {role:'Bridesmaid',name:'',phone:'',email:''},
+    {role:'Bridesmaid',name:'',phone:'',email:''},
+    {role:'Bridesmaid',name:'',phone:'',email:''},
+  ],
+  vips:[
+    {role:'Parent / Family VIP',name:'',phone:'',email:''},
+    {role:'Parent / Family VIP',name:'',phone:'',email:''},
+    {role:'Parent / Family VIP',name:'',phone:'',email:''},
+  ]
+};
+
+const DEFAULT_DAYOF = [
+  {time:'Morning',event:'Getting Ready',notes:'Hair & make-up · Location TBD'},
+  {time:'TBD',event:'First Look (optional)',notes:'Photographer · Location TBD'},
+  {time:'TBD',event:'Wedding Party Photos',notes:'Photographer'},
+  {time:'TBD',event:'Ceremony Begins',notes:'Set your ceremony time'},
+  {time:'TBD',event:'Cocktail Hour',notes:'Entertainment TBD'},
+  {time:'TBD',event:'Reception Begins',notes:'Guests seated'},
+  {time:'TBD',event:'First Dance',notes:'Song TBD'},
+  {time:'TBD',event:'Dinner & First Course',notes:'Menu TBD'},
+  {time:'TBD',event:'Speeches / Toasts',notes:'Best Man · MOH · Family'},
+  {time:'TBD',event:'Cake Cutting',notes:'Baker TBD'},
+  {time:'TBD',event:'Parent Dances',notes:'Songs TBD'},
+  {time:'TBD',event:'Dance Floor Opens',notes:'DJ takes over'},
+  {time:'TBD',event:'Last Dance / Send-Off',notes:'End of evening'},
+];
+
+const DEFAULT_SONGS = [
+  {moment:'💍 First Dance',song:''},
+  {moment:'👨‍👧 Father-Daughter Dance',song:''},
+  {moment:'👩‍👦 Mother-Son Dance',song:''},
+  {moment:'⛪ Ceremony Processional',song:''},
+  {moment:'🎉 Ceremony Recessional',song:''},
+  {moment:'🍹 Cocktail Hour Vibe',song:''},
+  {moment:'🌙 Last Song of the Night',song:''},
+];
+
+const DEFAULT_DANCE_LESSONS = [
+  {label:'Lesson #1',date:''},
+  {label:'Lesson #2',date:''},
+];
+
+const CONTACT_LABELS = ['Wedding Planner','Venue Contact','Photographer','Videographer','Florist','DJ / Band','Hair & Make-Up','Transportation','Rehearsal Dinner','Officiant'];
+
+/* ── LIVE DATA ── */
+let vendors, partyData, dayofRows, songData, danceLessons, extras;
+
+function initData(){
+  try{ vendors=JSON.parse(localStorage.getItem('ck_vendors')||'null')||JSON.parse(JSON.stringify(DEFAULT_VENDORS)); }catch(e){ vendors=JSON.parse(JSON.stringify(DEFAULT_VENDORS)); }
+  try{ partyData=JSON.parse(localStorage.getItem('ck_party')||'null')||JSON.parse(JSON.stringify(DEFAULT_PARTY)); }catch(e){ partyData=JSON.parse(JSON.stringify(DEFAULT_PARTY)); }
+  try{ dayofRows=JSON.parse(localStorage.getItem('ck_dayof')||'null')||JSON.parse(JSON.stringify(DEFAULT_DAYOF)); }catch(e){ dayofRows=JSON.parse(JSON.stringify(DEFAULT_DAYOF)); }
+  try{ songData=JSON.parse(localStorage.getItem('ck_songs')||'null')||JSON.parse(JSON.stringify(DEFAULT_SONGS)); }catch(e){ songData=JSON.parse(JSON.stringify(DEFAULT_SONGS)); }
+  try{ danceLessons=JSON.parse(localStorage.getItem('ck_dance')||'null')||JSON.parse(JSON.stringify(DEFAULT_DANCE_LESSONS)); }catch(e){ danceLessons=JSON.parse(JSON.stringify(DEFAULT_DANCE_LESSONS)); }
+  try{ extras=JSON.parse(localStorage.getItem('ck_extras')||'null')||{}; }catch(e){ extras={}; }
+}
+
+function saveAll(){
+  localStorage.setItem('ck_vendors',JSON.stringify(vendors));
+  localStorage.setItem('ck_party',JSON.stringify(partyData));
+  localStorage.setItem('ck_dayof',JSON.stringify(dayofRows));
+  localStorage.setItem('ck_songs',JSON.stringify(songData));
+  localStorage.setItem('ck_dance',JSON.stringify(danceLessons));
+  localStorage.setItem('ck_extras',JSON.stringify(extras));
+  updateVendorCount();
+}
+
+function saveExtras(){
+  extras.vendorNotes = document.getElementById('vendorNotes')?.value||'';
+  extras.dayofNotes  = document.getElementById('dayofNotes')?.value||'';
+  extras.djDetails   = document.getElementById('djDetails')?.value||'';
+  extras.mustPlay    = document.getElementById('mustPlay')?.value||'';
+  extras.doNotPlay   = document.getElementById('doNotPlay')?.value||'';
+  extras.logNotes    = document.getElementById('logNotes')?.value||'';
+  extras.registryUrl = document.getElementById('registryUrl')?.value||'';
+  extras.statGroom   = document.getElementById('statGroom')?.value||'';
+  extras.statBride   = document.getElementById('statBride')?.value||'';
+  localStorage.setItem('ck_extras',JSON.stringify(extras));
+}
+
+function loadExtras(){
+  if(!extras) return;
+  const set=(id,v)=>{ const el=document.getElementById(id); if(el&&v)el.value=v; };
+  set('vendorNotes',extras.vendorNotes);
+  set('dayofNotes',extras.dayofNotes);
+  set('djDetails',extras.djDetails);
+  set('mustPlay',extras.mustPlay);
+  set('doNotPlay',extras.doNotPlay);
+  set('logNotes',extras.logNotes);
+  set('registryUrl',extras.registryUrl);
+  set('statGroom',extras.statGroom);
+  set('statBride',extras.statBride);
+}
+
+/* ══ VENDORS ══ */
+const STATUS_OPTS = ['empty','paid','partial','due','ready'];
+const STATUS_LABELS = {empty:'TBD',paid:'Paid ✓',partial:'Deposit Paid',due:'Balance Due',ready:'Booked'};
+const STATUS_BADGE  = {empty:'dim',paid:'grn',partial:'gold',due:'red',ready:'org'};
+
+function renderVendors(){
+  const grid=document.getElementById('vendorGrid'); if(!grid)return;
+  grid.innerHTML = vendors.map((v,i)=>`
+    <div class="vc" onclick="openVendorModal(${i})" style="cursor:pointer">
+      <div class="vc-sp ${v.status}"></div>
+      <div class="vc-cat">${v.cat}</div>
+      <div class="vc-name">${v.name||'<span style="color:var(--t3);font-style:italic">Click to add</span>'}</div>
+      <div class="vc-person" style="color:${v.contact?'var(--t2)':'var(--t3)'}">${v.contact||'Contact name'}</div>
+      <div class="vc-foot">
+        <div class="vc-contact" style="color:${v.phone?'var(--t2)':'var(--t3)'}">${v.phone||'Phone'}${v.email?' · '+v.email:''}</div>
+        <div>
+          <span class="bdg ${STATUS_BADGE[v.status]||'dim'}">${STATUS_LABELS[v.status]||'TBD'}</span>
+          ${v.amount?`<div style="font-family:var(--mono);font-size:9px;color:var(--gold);margin-top:3px">${v.amount}</div>`:''}
+        </div>
+      </div>
+    </div>`).join('') +
+    `<div class="vc" style="border-style:dashed;opacity:.6;cursor:pointer" onclick="addVendor()">
+      <div class="vc-sp empty"></div>
+      <div class="vc-cat">Add Vendor</div>
+      <div class="vc-name" style="color:var(--t3)">+ Other Vendor</div>
+      <div class="vc-person" style="color:var(--t4)">Photobooth, Band, etc.</div>
+      <div class="vc-foot"><div class="vc-contact">—</div><span class="bdg dim">Empty</span></div>
+    </div>`;
+  updateVendorCount();
+}
+
+function updateVendorCount(){
+  const booked=vendors.filter(v=>v.name).length;
+  const el=document.getElementById('heroVendorCount'); if(el)el.textContent=booked;
+  const ov=document.getElementById('ovVendors'); if(ov)ov.textContent=booked;
+}
+
+function addVendor(){
+  vendors.push({cat:'New Vendor',name:'',contact:'',phone:'',email:'',amount:'',status:'empty'});
+  saveAll(); renderVendors();
+  openVendorModal(vendors.length-1);
+}
+
+let editingVendorIdx=null;
+function openVendorModal(i){
+  editingVendorIdx=i; const v=vendors[i];
+  document.getElementById('vm-cat').value=v.cat||'';
+  document.getElementById('vm-name').value=v.name||'';
+  document.getElementById('vm-contact').value=v.contact||'';
+  document.getElementById('vm-phone').value=v.phone||'';
+  document.getElementById('vm-email').value=v.email||'';
+  document.getElementById('vm-amount').value=v.amount||'';
+  document.getElementById('vm-status').value=v.status||'empty';
+  document.getElementById('vendorModal').style.display='flex';
+  document.getElementById('vm-name').focus();
+}
+
+function saveVendorModal(){
+  const i=editingVendorIdx; if(i===null)return;
+  vendors[i]={
+    cat:document.getElementById('vm-cat').value,
+    name:document.getElementById('vm-name').value,
+    contact:document.getElementById('vm-contact').value,
+    phone:document.getElementById('vm-phone').value,
+    email:document.getElementById('vm-email').value,
+    amount:document.getElementById('vm-amount').value,
+    status:document.getElementById('vm-status').value,
+  };
+  saveAll(); renderVendors(); closeVendorModal();
+  toast('Vendor saved ✓','grn');
+}
+
+function deleteVendor(){
+  if(editingVendorIdx===null)return;
+  vendors.splice(editingVendorIdx,1);
+  saveAll(); renderVendors(); closeVendorModal();
+  toast('Vendor removed','rose');
+}
+
+function closeVendorModal(){ document.getElementById('vendorModal').style.display='none'; editingVendorIdx=null; }
+
+/* ══ WEDDING PARTY ══ */
+function renderPartyCard(person, groupKey, idx){
+  return `<div class="pm ${person.vip?'vip':''}" onclick="openPersonModal('${groupKey}',${idx})" style="cursor:pointer">
+    <div class="pm-role">${person.role}</div>
+    <div class="pm-name">${person.name||'<span style="color:var(--t3);font-style:italic">Click to add</span>'}</div>
+    <div class="pm-contact" style="color:${person.phone?'var(--t2)':'var(--t3)'}">${person.phone||'Phone · Email'}</div>
+  </div>`;
+}
+
+function renderAddCard(groupKey){
+  return `<div class="pm" style="border-style:dashed;opacity:.5;cursor:pointer" onclick="addPartyMember('${groupKey}')">
+    <div class="pm-role">+ Add</div><div class="pm-name" style="color:var(--t3)">—</div>
+  </div>`;
+}
+
+function renderParty(){
+  const og=document.getElementById('officiantGrid');
+  const gg=document.getElementById('groomsmenGrid');
+  const bg=document.getElementById('bridesmaidsGrid');
+  const vg=document.getElementById('vipGrid');
+  if(!og)return;
+  og.innerHTML=partyData.officiants.map((p,i)=>renderPartyCard(p,'officiants',i)).join('');
+  gg.innerHTML=partyData.groomsmen.map((p,i)=>renderPartyCard(p,'groomsmen',i)).join('')+renderAddCard('groomsmen');
+  bg.innerHTML=partyData.bridesmaids.map((p,i)=>renderPartyCard(p,'bridesmaids',i)).join('')+renderAddCard('bridesmaids');
+  vg.innerHTML=partyData.vips.map((p,i)=>renderPartyCard(p,'vips',i)).join('')+renderAddCard('vips');
+}
+
+function addPartyMember(groupKey){
+  const roles={groomsmen:'Groomsman',bridesmaids:'Bridesmaid',vips:'Family VIP'};
+  partyData[groupKey].push({role:roles[groupKey]||'',name:'',phone:'',email:''});
+  saveAll(); renderParty();
+  openPersonModal(groupKey, partyData[groupKey].length-1);
+}
+
+let editingPerson={};
+function openPersonModal(groupKey, idx){
+  editingPerson={groupKey,idx};
+  const p=partyData[groupKey][idx];
+  document.getElementById('pm-role').value=p.role||'';
+  document.getElementById('pm-name').value=p.name||'';
+  document.getElementById('pm-phone').value=p.phone||'';
+  document.getElementById('pm-email').value=p.email||'';
+  document.getElementById('personModal').style.display='flex';
+  document.getElementById('pm-name').focus();
+}
+
+function savePersonModal(){
+  const {groupKey,idx}=editingPerson; if(!groupKey)return;
+  partyData[groupKey][idx]={
+    ...partyData[groupKey][idx],
+    role:document.getElementById('pm-role').value,
+    name:document.getElementById('pm-name').value,
+    phone:document.getElementById('pm-phone').value,
+    email:document.getElementById('pm-email').value,
+  };
+  saveAll(); renderParty(); renderQuickContacts(); closePersonModal();
+  toast('Saved ✓','grn');
+}
+
+function deletePerson(){
+  const {groupKey,idx}=editingPerson; if(!groupKey)return;
+  partyData[groupKey].splice(idx,1);
+  saveAll(); renderParty(); closePersonModal();
+  toast('Removed','rose');
+}
+
+function closePersonModal(){ document.getElementById('personModal').style.display='none'; editingPerson={}; }
+
+/* ══ DAY-OF ══ */
+function renderDayof(){
+  const tbody=document.getElementById('dayofBody'); if(!tbody)return;
+  tbody.innerHTML=dayofRows.map((r,i)=>`
+    <tr>
+      <td><input class="editable" style="width:100%;font-size:11px;padding:3px 5px" value="${esc(r.time)}" placeholder="Time" oninput="dayofRows[${i}].time=this.value;saveAll()"></td>
+      <td><input class="editable" style="width:100%;font-size:12px;padding:3px 5px" value="${esc(r.event)}" placeholder="Event" oninput="dayofRows[${i}].event=this.value;saveAll()"></td>
+      <td><input class="editable" style="width:100%;font-size:11px;padding:3px 5px;color:var(--t2)" value="${esc(r.notes)}" placeholder="Notes" oninput="dayofRows[${i}].notes=this.value;saveAll()"></td>
+      <td style="text-align:center"><button onclick="deleteDayofRow(${i})" style="background:none;border:none;color:var(--t4);cursor:pointer;font-size:12px;padding:2px 4px" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--t4)'">✕</button></td>
+    </tr>`).join('');
+}
+
+function addDayofRow(){
+  dayofRows.push({time:'TBD',event:'',notes:''});
+  saveAll(); renderDayof();
+  // focus the new event input
+  const rows=document.querySelectorAll('#dayofBody tr');
+  if(rows.length) rows[rows.length-1].querySelector('input:nth-child(1)').focus();
+}
+
+function deleteDayofRow(i){
+  if(dayofRows.length<=1)return;
+  dayofRows.splice(i,1);
+  saveAll(); renderDayof();
+}
+
+/* ══ MUSIC ══ */
+function renderSongs(){
+  const el=document.getElementById('songTracker'); if(!el)return;
+  el.innerHTML=songData.map((s,i)=>`
+    <div class="music-row">
+      <div class="mr-moment" style="min-width:190px">${s.moment}</div>
+      <input class="editable" style="flex:1.2;font-style:italic;font-size:12px;padding:3px 7px;color:var(--t2)" value="${esc(s.song)}" placeholder="Song title · Artist" oninput="songData[${i}].song=this.value;saveAll();updateSongStatus(${i},this.value)">
+      <div class="mr-status ${s.song?'booked':'pending'}" id="songStatus${i}">${s.song?'Chosen':'TBD'}</div>
+    </div>`).join('');
+
+  const dl=document.getElementById('danceLessons'); if(!dl)return;
+  dl.innerHTML=danceLessons.map((d,i)=>`
+    <div class="music-row" style="border-top:${i===0?'1px solid var(--border)':'none'};padding-top:${i===0?'10px':'0'}">
+      <div class="mr-moment">${d.label}</div>
+      <input class="editable" style="flex:1.2;font-size:12px;padding:3px 7px;color:var(--t2)" value="${esc(d.date)}" placeholder="Date TBD" oninput="danceLessons[${i}].date=this.value;saveAll()">
+      <div class="mr-status ${d.date?'booked':'pending'}">${d.date?'Booked':'TBD'}</div>
+    </div>`).join('');
+}
+
+function updateSongStatus(i,val){
+  const el=document.getElementById('songStatus'+i); if(!el)return;
+  el.className='mr-status '+(val?'booked':'pending');
+  el.textContent=val?'Chosen':'TBD';
+}
+
+/* ══ QUICK CONTACTS (Logistics) ══ */
+function renderQuickContacts(){
+  const el=document.getElementById('quickContactList'); if(!el)return;
+  const contacts=[
+    ['Wedding Planner', ()=>{ const v=vendors.find(v=>v.cat==='Wedding Planner'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Venue Contact',   ()=>{ const v=vendors.find(v=>v.cat==='Venue & Catering'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Photographer',    ()=>{ const v=vendors.find(v=>v.cat==='Photography'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Videographer',    ()=>{ const v=vendors.find(v=>v.cat==='Videography'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Florist',         ()=>{ const v=vendors.find(v=>v.cat==='Florist'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['DJ / Band',       ()=>{ const v=vendors.find(v=>v.cat==='DJ / Entertainment'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Hair & MU',       ()=>{ const v=vendors.find(v=>v.cat==='Hair & Make-Up'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Transportation',  ()=>{ const v=vendors.find(v=>v.cat==='Transportation'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Rehearsal Dinner',()=>{ const v=vendors.find(v=>v.cat==='Rehearsal Dinner'); return v&&v.contact?`${v.contact}${v.phone?' · '+v.phone:''}`:'—'; }],
+    ['Officiant',       ()=>{ const p=partyData.officiants[0]; return p&&p.name?`${p.name}${p.phone?' · '+p.phone:''}`:'—'; }],
+  ];
+  el.innerHTML=contacts.map(([label,fn],idx)=>`
+    <div style="display:flex;justify-content:space-between;border-bottom:${idx<contacts.length-1?'1px solid var(--border)':'none'};padding:5px 0">
+      <span style="color:var(--t3)">${label}</span>
+      <span style="color:var(--t2)">${fn()}</span>
+    </div>`).join('');
+}
+
+/* ══ MODALS ══ */
+function injectModals(){
+  if(document.getElementById('vendorModal'))return;
+  const statusOpts=STATUS_OPTS.map(s=>`<option value="${s}">${STATUS_LABELS[s]}</option>`).join('');
+  document.body.insertAdjacentHTML('beforeend',`
+  <!-- VENDOR MODAL -->
+  <div id="vendorModal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px">
+    <div style="background:var(--surface);border:1px solid var(--border2);padding:28px 28px 22px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto">
+      <div style="font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--rose2);margin-bottom:12px">Edit Vendor</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+        <div><label class="fl">Category</label><input id="vm-cat" class="fi" placeholder="e.g. Photography"></div>
+        <div><label class="fl">Vendor Name</label><input id="vm-name" class="fi" placeholder="e.g. Smith Studios"></div>
+        <div><label class="fl">Contact Person</label><input id="vm-contact" class="fi" placeholder="First name"></div>
+        <div><label class="fl">Phone</label><input id="vm-phone" class="fi" placeholder="(555) 555-5555"></div>
+        <div><label class="fl">Email</label><input id="vm-email" class="fi" placeholder="email@example.com"></div>
+        <div><label class="fl">Amount / Contract</label><input id="vm-amount" class="fi" placeholder="e.g. $3,500 total"></div>
+      </div>
+      <div style="margin-bottom:16px"><label class="fl">Payment Status</label>
+        <select id="vm-status" class="fi">${statusOpts}</select>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button onclick="saveVendorModal()" style="flex:1;padding:11px;background:linear-gradient(135deg,rgba(61,170,117,.2),rgba(61,170,117,.08));border:1px solid rgba(61,170,117,.4);font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--grn);cursor:pointer">✓ Save</button>
+        <button onclick="deleteVendor()" style="padding:11px 16px;background:none;border:1px solid rgba(196,80,80,.3);font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);cursor:pointer">✕</button>
+        <button onclick="closeVendorModal()" style="padding:11px 16px;background:none;border:1px solid var(--border2);font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);cursor:pointer">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSON MODAL -->
+  <div id="personModal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px">
+    <div style="background:var(--surface);border:1px solid var(--border2);padding:28px 28px 22px;width:100%;max-width:420px">
+      <div style="font-family:var(--mono);font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--rose2);margin-bottom:12px">Edit Person</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div><label class="fl">Role</label><input id="pm-role" class="fi" placeholder="e.g. Best Man"></div>
+        <div><label class="fl">Name</label><input id="pm-name" class="fi" placeholder="Full name"></div>
+        <div><label class="fl">Phone</label><input id="pm-phone" class="fi" placeholder="(555) 555-5555"></div>
+        <div><label class="fl">Email</label><input id="pm-email" class="fi" placeholder="email@example.com"></div>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button onclick="savePersonModal()" style="flex:1;padding:11px;background:linear-gradient(135deg,rgba(61,170,117,.2),rgba(61,170,117,.08));border:1px solid rgba(61,170,117,.4);font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--grn);cursor:pointer">✓ Save</button>
+        <button onclick="deletePerson()" style="padding:11px 16px;background:none;border:1px solid rgba(196,80,80,.3);font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);cursor:pointer">✕</button>
+        <button onclick="closePersonModal()" style="padding:11px 16px;background:none;border:1px solid var(--border2);font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--t3);cursor:pointer">Cancel</button>
+      </div>
+    </div>
+  </div>
+  `);
+
+  // close modals on backdrop click
+  document.getElementById('vendorModal').addEventListener('click',function(e){if(e.target===this)closeVendorModal();});
+  document.getElementById('personModal').addEventListener('click',function(e){if(e.target===this)closePersonModal();});
+}
+
+/* ══ INIT ALL ══ */
+function initInteractive(){
+  initData();
+  injectModals();
+  renderVendors();
+  renderParty();
+  renderDayof();
+  renderSongs();
+  renderQuickContacts();
+  loadExtras();
+}
+
+
+/* ════ LOGIN ════ */
+const AUTH = {
+  chris:{pass:'Ball27!',name:'Chris',role:'groom'},
+  katie:{pass:'Ball27!',name:'Katie',role:'bride'},
+};
+
+function doLogin(){
+  const val = document.getElementById('loginPass').value;
+  const err = document.getElementById('loginErr');
+  // check against all users
+  const user = Object.values(AUTH).find(u => u.pass === val);
+  if(user){
+    sessionStorage.setItem('ck_auth', JSON.stringify({name:user.name, role:user.role}));
+    const screen = document.getElementById('loginScreen');
+    screen.style.transition = 'opacity .6s ease';
+    screen.style.opacity = '0';
+    setTimeout(()=>{ screen.classList.add('hidden'); ringBells(); }, 600);
+    err.textContent = '';
+  } else {
+    err.textContent = 'Incorrect code — try again';
+    err.style.opacity = '1';
+    document.getElementById('loginPass').style.borderColor = 'rgba(196,80,80,.6)';
+    setTimeout(()=>{ document.getElementById('loginPass').style.borderColor = ''; }, 1200);
+  }
+}
+
+function doLogout(){
+  sessionStorage.removeItem('ck_auth');
+  location.reload();
+}
+
+function checkAuth(){
+  const auth = sessionStorage.getItem('ck_auth');
+  if(!auth){
+    document.getElementById('loginScreen').classList.remove('hidden');
+    startPetals();
+    return false;
+  }
+  document.getElementById('loginScreen').classList.add('hidden');
+  return true;
+}
+
+/* ── Falling rose petals on login screen ── */
+function startPetals(){
+  const canvas = document.getElementById('petalCanvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, petals = [];
+
+  function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COLORS = ['#C4716A','#E8998A','#7A3A35','#D4A843','#F0C466'];
+
+  for(let i=0;i<55;i++){
+    petals.push({
+      x: Math.random()*window.innerWidth,
+      y: Math.random()*window.innerHeight - window.innerHeight,
+      size: 5 + Math.random()*9,
+      speed: 0.6 + Math.random()*1.4,
+      drift: (Math.random()-.5)*0.8,
+      rot: Math.random()*360,
+      rotSpeed: (Math.random()-.5)*2.5,
+      color: COLORS[Math.floor(Math.random()*COLORS.length)],
+      opacity: 0.15 + Math.random()*0.35,
+      wobble: Math.random()*Math.PI*2,
+      wobbleSpeed: 0.02 + Math.random()*0.03,
+    });
+  }
+
+  let running = true;
+  function drawPetal(p){
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rot * Math.PI/180);
+    ctx.globalAlpha = p.opacity;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, p.size/2, p.size, 0, 0, Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function loop(){
+    if(!running)return;
+    ctx.clearRect(0,0,W,H);
+    petals.forEach(p=>{
+      p.y += p.speed;
+      p.wobble += p.wobbleSpeed;
+      p.x += p.drift + Math.sin(p.wobble)*0.6;
+      p.rot += p.rotSpeed;
+      if(p.y > H + 20){ p.y = -20; p.x = Math.random()*W; }
+      drawPetal(p);
+    });
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  // Stop petals once logged in
+  document.getElementById('loginScreen').addEventListener('transitionend', ()=>{ running=false; });
+}
+
+/* ── Bell ring burst on login success ── */
+function ringBells(){
+  // brief golden particle burst from hero bells
+  const bells = document.querySelectorAll('.hero-bell');
+  bells.forEach((b,i)=>{
+    setTimeout(()=>{
+      b.style.transition='transform .15s ease';
+      b.style.transform='rotate(35deg) scale(1.3)';
+      setTimeout(()=>{ b.style.transform=''; }, 180);
+    }, i*80);
+  });
+}
+
+/* ════ INIT ════ */
+window.addEventListener('DOMContentLoaded',()=>{
+  if(!checkAuth())return;
+  loadState();updateCLStats();initInteractive();
+});
+</script>
+</body>
+</html>
